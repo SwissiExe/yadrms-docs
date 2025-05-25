@@ -29,7 +29,7 @@ Das Detailkonzept konkretisiert die im Grobkonzept definierte Lösung. Es beschr
 graph TD
     User[User]
     Frontend[Next.js Web-UI]
-    API[API (Next.js)]
+    API[API from Next.js]
     Backend[Python Script Generator]
     Output[OUTPUT: Python Client]
     Discord[Discord Server]
