@@ -1,6 +1,6 @@
 # Projektantrag: YADRMS (Yet Another Discord Remote Management Software)
 
-**Abgabe-Datum:** 01.08.2024
+**Abgabe-Datum:** [TODO]
 
 ---
 

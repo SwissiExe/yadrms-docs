@@ -1,7 +1,7 @@
 # Design Feedback: Stakeholder Interviews
 
 ## Interview Information
-- **Date Range**: March 10-17, 2024
+- **Date Range**: [TODO]
 - **Format**: One-on-one interviews
 - **Participants**: 6 stakeholders (2 Product Managers, 2 Technical Leads, 2 Documentation Managers)
 - **Duration**: 1 hour per interview
