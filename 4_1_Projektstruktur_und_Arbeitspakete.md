@@ -106,8 +106,8 @@ graph TD
 | 3.1    | Integration FE/BE         | Zusammenführung von Frontend und Backend             | Dev-Team          | 2 PT          | 2.1.4, 2.2.4          | Integriertes System               |
 | 3.2    | Systemtests                | End-to-End-Tests, Fehlerbehebung                     | Dev-Team          | 2 PT          | 3.1                   | Testprotokolle, Fehlerliste       |
 | 3.3    | User Acceptance Test       | Abnahme durch Product Owner                          | PO, User          | 1 PT          | 3.2                   | Abnahmeprotokoll                  |
-| 4.1    | Nutzwertanalyse            | Nutzwertanalyse dokumentieren                        | PM, Team          | 1 PT          | 1.1                   | Nutzwertanalyse.md                |
-| 4.2    | Detailkonzept              | Detailkonzept dokumentieren                          | PM, Architekt     | 1 PT          | 1.2                   | Detailkonzept.md                  |
+| 4.1    | Nutzwertanalyse            | Nutzwertanalyse dokumentieren                        | PM, Team          | 1 PT          | 1.1                   | 6_0_Nutzwertanalyse.md                |
+| 4.2    | Detailkonzept              | Detailkonzept dokumentieren                          | PM, Architekt     | 1 PT          | 1.2                   | 5_0_Detailkonzept.md                  |
 | 4.3    | How-To & Anwenderdoku      | Anwender- und Entwicklerdokumentation                | Team              | 2 PT          | 3.3                   | How-To.md, Readme, User Guide     |
 | 4.4    | Projektabschluss & Übergabe| Abschluss, Lessons Learned, Übergabe                 | PM, Team          | 1 PT          | 4.3                   | Abschlussbericht, Übergabeprotokoll|
 

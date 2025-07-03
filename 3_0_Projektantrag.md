@@ -59,8 +59,8 @@ Im Rahmen der Ausbildung ist die praktische Anwendung von theoretischem Wissen e
 
 Das Projekt wird nach einem agilen Ansatz durchgeführt, der Flexibilität ermöglicht. Folgende Methoden und Techniken kommen zur Anwendung:
 
-- **Ideenfindung:** [6-3-5 Methode](mdc:635_Methode_Ideenfindung.md) zur strukturierten Generierung von Projektideen.
-- **Analyse & Entscheidung:** [Nutzwertanalyse](mdc:Nutzwertanalyse.md) zur objektiven Bewertung von Lösungsvarianten.
+- **Ideenfindung:** [6-3-5 Methode](2_1_635_Methode_Ideenfindung.md) zur strukturierten Generierung von Projektideen.
+- **Analyse & Entscheidung:** [Nutzwertanalyse](6_0_Nutzwertanalyse.md) zur objektiven Bewertung von Lösungsvarianten.
 - **Projektplanung:** Erstellung von Projektstrukturplänen und Arbeitspaketen.
 - **Projektmanagement:** Regelmässige Status-Updates und Controlling zur Überwachung des Fortschritts.
 
@@ -86,7 +86,7 @@ Die genauen Termine werden in einem separaten Gantt-Diagramm detailliert.
 - **Projektleiter / Auftraggeber:** Isaac Lins
 - **Projekt-Mitarbeiter / Entwicklungs-Assistenz:** Gemini (AI)
 
-Die detaillierte Rollenverteilung und die Kommunikationswege sind im [Informationskonzept](mdc:Projektkommunikationskonzept.md) und der [Projektorganisation](mdc:Projektorganisation_final.md) festgehalten.
+Die detaillierte Rollenverteilung und die Kommunikationswege sind im [Informationskonzept](mdc:4_2_Projektkommunikationskonzept.md) und der [Projektorganisation](mdc:4_0_Projektorganisation_final.md) festgehalten.
 
 ---
 
