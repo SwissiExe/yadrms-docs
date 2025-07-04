@@ -1,7 +1,6 @@
 # Usability Test Feedback: YADRMS BuilderUI
 
 ## Test Information
-- **Date**: [TODO]
 - **Test Type**: Moderated Usability Test
 - **Participants**: 5 end users (mix of technical and semi-technical backgrounds)
 - **Duration**: 20 minutes per session
