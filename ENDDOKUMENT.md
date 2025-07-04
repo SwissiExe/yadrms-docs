@@ -192,6 +192,8 @@ Ein vollständiges, funktionsfähiges System bestehend aus:
 
 # HERO JOURNEY: [TODO: put in PDF]
 
+# Grobkonzept mit Varianten morphologischer Kasten: [TODO: put in PDF]
+
 # Projektantrag: [TODO: put in PDF]
 
 # Projektorganisation – YADRMS
@@ -495,3 +497,362 @@ Ein strukturiertes Kommunikationskonzept stellt sicher, dass alle Projektbeteili
 ---
 
 **Dieses Kommunikationskonzept ist Bestandteil der Projektdokumentation und sichert eine reibungslose Zusammenarbeit, klare Zuständigkeiten und transparente Abläufe im Projekt YADRMS.** 
+
+# Detailkonzept – YADRMS
+
+## Ziel
+Das Detailkonzept konkretisiert die im Grobkonzept definierte Lösung. Es beschreibt die technische, funktionale und organisatorische Umsetzung im Detail und dient als Basis für die Realisierung des Projekts.
+
+---
+
+## 1. Technisches Konzept
+
+### Eingesetzte Tools, Frameworks & Sprachen
+
+| Komponente   | Technologie/Tool                |
+|--------------|---------------------------------|
+| Frontend     | Next.js (React, TypeScript), TailwindCSS, ShadCN UI, Radix UI |
+| Backend      | Python 3.8+, Modular Scripting  |
+| API          | Next.js API Routes              |
+| Datenhaltung | JSON-Dateien (Settings, Logs)   |
+| Sonstiges    | Discord API, Node.js, Playwright, Jest, Mocha |
+
+### Architekturübersicht
+
+- **Architektur:** Microservice-orientiert, Client-Server-Modell
+- **Frontend:** Web-App (Next.js) für Konfiguration, Steuerung und Monitoring
+- **Backend:** Python-Script-Generator, modulare Komponenten
+- **Kommunikation:** REST-APIs (Next.js), Dateibasierte Übergabe (Settings, Output)
+- **Drittanbieter:** Discord als Kommunikationskanal
+
+```mermaid
+graph TD
+    User[User]
+    Frontend[Next.js Web-UI]
+    API[API from Next.js]
+    Backend[Python Script Generator]
+    Output[OUTPUT: Python Client]
+    Discord[Discord Server]
+    Target[Zielsystem]
+
+    User --> Frontend
+    Frontend --> API
+    API --> Backend
+    Backend --> Output
+    Output --> Target
+    Target --> Discord
+    User --> Discord
+```
+
+---
+
+## 2. Funktionales Konzept
+
+### Hauptfunktionen
+
+| Funktion                | Input                        | Ablauf (Kurz)                                                                 | Output                        |
+|-------------------------|------------------------------|-------------------------------------------------------------------------------|-------------------------------|
+| Bot-Konfiguration       | Token, Guild-ID, Module      | User gibt Daten im UI ein, speichert Settings                                 | settings.json                  |
+| Client-Generierung      | Settings                     | API ruft Python-Builder auf, generiert Script                                 | Python-Client im OUTPUT        |
+| Bot-Deployment          | Python-Client                | User startet Script auf Zielsystem                                            | Bot verbindet zu Discord       |
+| Remote-Steuerung        | Discord-Commands             | User sendet .Befehle an Bot, dieser führt sie aus                             | Antwort im Discord-Channel     |
+| Live-Monitoring         | -                            | UI zeigt Logs und Status in Echtzeit                                          | Log-Stream im UI               |
+| Modulerweiterung        | Python-Modul                 | Entwickler legt neues Modul im Backend ab                                     | Modul erscheint im UI          |
+
+### Optional: UI-Mockup (Beschreibung)
+- **BuilderUI:** Übersichtliche Eingabemaske für Token, Guild-ID, Modulauswahl, Kompilieren-Button, Log-Viewer.
+- **Testing Panel:** Start/Stop-Button, Dropdown für Scripts, Live-Log-Ausgabe.
+
+---
+
+## 3. Ablaufbeschreibung (Nutzerflüsse)
+
+### Beispiel: Bot-Konfiguration & Deployment
+1. User öffnet die Web-App (BuilderUI)
+2. Gibt Discord-Bot-Token, Guild-ID und wählt Module aus
+3. Speichert die Konfiguration (Settings werden als JSON abgelegt)
+4. Klickt auf "Kompilieren" – API ruft Python-Builder auf
+5. Generiertes Python-Script wird im OUTPUT-Ordner bereitgestellt
+6. User lädt Script herunter und startet es auf dem Zielsystem
+7. Bot verbindet sich mit Discord und erstellt/verwaltet einen Channel
+8. User steuert das Zielsystem über Discord-Kommandos
+
+### Beispiel: Remote-Befehl
+1. User sendet z. B. `.screenshot` im Discord-Channel
+2. Bot empfängt Befehl, führt Modul aus
+3. Ergebnis (z. B. Screenshot) wird als Nachricht/Datei im Channel gepostet
+
+---
+
+## 4. Daten- und Informationskonzept
+
+### Datenmodell (vereinfachtes ERD)
+
+```mermaid
+erDiagram
+    USER ||--o{ SETTINGS : konfiguriert
+    SETTINGS ||--o{ CLIENT_SCRIPT : erzeugt
+    CLIENT_SCRIPT ||--o{ LOG : erzeugt
+    CLIENT_SCRIPT ||--o{ MODULE : enthält
+    MODULE ||--o{ DEPENDENCY : benötigt
+```
+
+### Datenquellen & Speicherorte
+- **Settings:** `backend/settings/settings.json`
+- **Module:** `backend/languages/python/components/done/`
+- **Generierte Clients:** `OUTPUT/`
+- **Logs:** Temporär im Backend, Anzeige im UI
+- **Discord:** Kommunikationsschnittstelle, keine persistente Speicherung
+
+---
+
+## 5. Testkonzept
+
+| Testart                | Beschreibung                                      | Verantwortlich      | Zeitraum         |
+|------------------------|---------------------------------------------------|---------------------|------------------|
+| Unit-Tests (Frontend)  | Komponenten- und Logiktests mit Jest, Playwright  | Entwickler Frontend | Laufend          |
+| Unit-Tests (Backend)   | Modultests für Python-Komponenten                 | Entwickler Backend  | Laufend          |
+| Integrationstests      | End-to-End-Tests UI ↔ API ↔ Backend               | Dev-Team           | Vor jedem Release|
+| User Acceptance Test   | Funktionaler Test durch Endnutzer                 | Product Owner       | Vor Go-Live      |
+
+---
+
+## 6. Zielsystem / Zielzustand
+
+Nach erfolgreicher Umsetzung steht ein modulares, webbasiertes Remote-Management-System zur Verfügung, das:
+- Über eine moderne UI (Next.js) konfigurierbar ist
+- Individuelle Python-Clients generiert
+- Remote-Steuerung und Monitoring via Discord ermöglicht
+- Einfach um neue Module erweiterbar ist
+- Logs und Status in Echtzeit anzeigt
+- Sicher und wartbar im eigenen Netzwerk betrieben werden kann
+
+**Am Ende verfügbar:**
+- Web-UI (BuilderUI, Testing Panel)
+- API-Schnittstellen
+- Python-Client-Generator
+- Dokumentation (Nutzwertanalyse, Detailkonzept, How-To)
+- Beispielmodule (Screenshot, Clipboard, Ghostwriting, Wallpaper, BSOD)
+
+---
+
+**Dieses Detailkonzept dient als verbindliche Grundlage für die weitere Projektumsetzung und die Erstellung des Gantt-Charts.** 
+
+# Nutzwertanalyse – YADRMS
+
+## Ziel
+Systematische Bewertung von Lösungsvarianten für das Remote-Management-System YADRMS anhand definierter Kriterien zur objektiven Entscheidungsfindung.
+
+---
+
+## 1. Kriterienauswahl & Gewichtung
+
+| Kriterium            | Gewichtung (%) |
+|----------------------|:--------------:|
+| Benutzerfreundlichkeit | 25            |
+| Kosten                | 15            |
+| Entwicklungsaufwand   | 20            |
+| Skalierbarkeit        | 15            |
+| Wartbarkeit           | 15            |
+| Sicherheit            | 10            |
+
+---
+
+## 2. Varianten
+
+- **Variante A:** YADRMS (Discord-basiert, modular, Open Source)
+- **Variante B:** Kommerzielles Remote-Management-Tool (z. B. TeamViewer, AnyDesk)
+- **Variante C:** Eigenentwicklung ohne Discord (klassische Web-App)
+
+---
+
+## 3. Bewertung der Varianten (1 = schlecht, 5 = sehr gut)
+
+| Kriterium            | Gewichtung | Variante A (YADRMS) | Variante B (Kommerziell) | Variante C (Eigenentwicklung) |
+|----------------------|:----------:|:-------------------:|:------------------------:|:-----------------------------:|
+| Benutzerfreundlichkeit | 25        | 4                   | 5                        | 3                             |
+| Kosten                | 15        | 5                   | 2                        | 4                             |
+| Entwicklungsaufwand   | 20        | 4                   | 5                        | 2                             |
+| Skalierbarkeit        | 15        | 4                   | 4                        | 3                             |
+| Wartbarkeit           | 15        | 4                   | 3                        | 3                             |
+| Sicherheit            | 10        | 3                   | 5                        | 4                             |
+
+---
+
+## 4. Nutzwertberechnung
+
+**Formel:** Bewertung × Gewichtung
+
+| Variante             | Nutzwert (Summe) |
+|----------------------|:----------------:|
+| YADRMS (A)           | 4×25 + 5×15 + 4×20 + 4×15 + 4×15 + 3×10 = **390** |
+| Kommerziell (B)      | 5×25 + 2×15 + 5×20 + 4×15 + 3×15 + 5×10 = **400** |
+| Eigenentwicklung (C) | 3×25 + 4×15 + 2×20 + 3×15 + 3×15 + 4×10 = **305** |
+
+---
+
+## 5. Grafische Darstellung
+
+```mermaid
+bar
+    title Nutzwertanalyse Variantenvergleich
+    x-axis YADRMS Kommerziell Eigenentwicklung
+    y-axis Nutzwert
+    "YADRMS" : 390
+    "Kommerziell" : 400
+    "Eigenentwicklung" : 305
+```
+
+---
+
+## 6. Auswertung & Entscheidungsbegründung
+
+Die kommerzielle Lösung (Variante B) erzielt mit 400 Punkten den höchsten Gesamtnutzwert, dicht gefolgt von YADRMS (Variante A) mit 390 Punkten. Die Eigenentwicklung ohne Discord (Variante C) liegt mit 305 Punkten deutlich zurück.
+
+**Entscheidung:**
+
+> Die kommerzielle Lösung bietet das beste Verhältnis aus Aufwand, Sicherheit und Benutzerfreundlichkeit. YADRMS ist jedoch eine sehr gute, kostengünstige und flexible Alternative, insbesondere für individuelle Anpassungen und Lernzwecke. 
+
+
+# Kickoff Meeting – YADRMS
+
+---
+
+**Datum:** 13.05.2025  
+**Ort:** Berufsschule  
+**Teilnehmer:** Isaac Lins (PL), Jay Nagel (AG), YADRMS-TEAM (Oliver Zenger, Joel Furter, Kenta Waibel)
+
+---
+
+## 1. Projektüberblick
+
+**Projekttitel:** *YADRMS (Yet Another Discord Remote Management Software)*
+
+YADRMS ist ein modulares Remote-Management-System, das Discord als Kommunikationskanal nutzt. Ziel ist die Entwicklung einer webbasierten Plattform, mit der individuelle Python-Clients generiert und über Discord gesteuert werden können. Das Projekt dient als Lern- und Demonstrationsobjekt für moderne Softwarearchitektur und Integration.
+
+---
+
+## 2. Ziele des Projekts
+
+- Entwicklung eines funktionalen Prototyps (Next.js-Frontend, Python-Backend)
+- Demonstration moderner Softwareentwicklung (Architektur, Integration, Dokumentation)
+- Erstellung einer vollständigen Projektdokumentation
+- Praktischer Lern- und Portfolio-Wert für alle Beteiligten
+
+---
+
+## 3. Projektteam & Rollen
+
+| **Rolle**              | **Name/Person**                | **Verantwortlichkeiten**                        |
+|------------------------|---------------------------------|-------------------------------------------------|
+| Projektleitung         | Isaac Lins                      | Steuerung, Zeitplan, Eskalation, Reporting      |
+| Frontend-Entwicklung   | YADRMS-TEAM                     | UI/UX, BuilderUI, API-Anbindung                 |
+| Backend-Entwicklung    | YADRMS-TEAM                     | Python-Builder, Module, Schnittstellen          |
+| Qualitätssicherung     | YADRMS-TEAM                     | Tests, Reviews, Abnahme                         |
+| Dokumentation          | YADRMS-TEAM                     | How-To, Anwenderdoku, Protokolle                |
+| Auftraggeber           | Jay Nagel                       | Anforderungen, Feedback, Abnahme                |
+
+---
+
+## 4. Vorgehen & Methoden
+
+- **Agiles Vorgehen:** Kanban, Sprints, regelmäßige Reviews
+- **Projektphasen:**
+    1. Projektidee & -definition
+    2. Grob- & Detailkonzept
+    3. Entwicklung (Frontend/Backend)
+    4. Integration & Test
+    5. Dokumentation & Abschluss
+- **Methoden:** 6-3-5 Ideenfindung, Nutzwertanalyse, Arbeitspakete, Gantt-Chart
+
+---
+
+## 5. Kommunikationswege & Meetings
+
+- **Tools:** Discord, Microsoft Teams, GitHub, Notion
+- **Meetings:**
+    - Wöchentliches Statusmeeting (Projektleitung, Team)
+    - Ad-hoc-Meetings bei Bedarf
+    - Protokolle und Aufgaben in GitHub/Notion
+- **Regeln:** Transparenz, offene Kommunikation, schriftliche Dokumentation wichtiger Entscheidungen
+
+---
+
+## 6. Erste Aufgaben & nächste Schritte
+
+- Finalisierung des Detailkonzepts
+- Aufsetzen der Projektstruktur in GitHub/Notion
+- Zuweisung erster Arbeitspakete (z.B. UI-Design, API-Spezifikation, Python-Builder-Prototyp)
+- Terminierung der nächsten Meetings
+
+---
+
+## 7. Risiken & Maßnahmen
+
+| **Risiko**                     | **Auswirkung** | **Gegenmaßnahme**                      |
+|-------------------------------|:--------------:|-----------------------------------------|
+| Verzögerung bei Schnittstellen | Hoch           | Frühe Abstimmung, API-Tests             |
+| Personalausfall                | Mittel         | Vertretungsregel, Wissensdoku           |
+| Technische Probleme            | Hoch           | Prototyping, regelmäßige Tests          |
+| Unklare Anforderungen          | Hoch           | Regelmäßige Reviews, Abnahme            |
+
+---
+
+## 8. Offene Punkte
+
+- [ ] Termin für nächstes Meeting festlegen
+- [ ] Verantwortlichkeiten für erste Aufgaben klären
+- [ ] Kommunikationskanäle final abstimmen
+- [ ] Aufgabenmanagement über GitHub-Issues: Aufgaben werden als Issues erstellt und von den Teammitgliedern eigenverantwortlich bearbeitet
+
+---
+
+**Abschluss:**
+> Das Team bestätigt die Ziele, das Vorgehen und die nächsten Schritte. Die Aufgaben werden über GitHub-Issues verteilt und nachverfolgt. Das Projekt startet offiziell mit diesem Kickoff.
+
+
+# Besondere Leistungen: YADRMS
+
+### 1. Innovative technische und konzeptionelle Lösungen
+
+Im Rahmen des Projekts wurden mehrere kreative und technisch anspruchsvolle Lösungen entwickelt, die den Kern von YADRMS bilden.
+
+**a) Dynamischer Client-Generator mit Web-UI:**
+Eine der herausragendsten Leistungen ist die Entwicklung einer webbasierten `BuilderUI` (Frontend mit Next.js). Diese ermöglicht es Benutzern, ohne Programmierkenntnisse einen benutzerdefinierten Python-Client zu konfigurieren. Der Benutzer kann per Mausklick gewünschte Funktionsmodule auswählen, die dann vom Backend dynamisch zu einem lauffähigen Skript zusammengefügt werden. Dies übertrifft eine statische Lösung bei weitem und bietet maximale Flexibilität.
+
+**b) Hochgradig modulare Backend-Architektur:**
+Das Python-Backend wurde nach einem streng modularen Prinzip konzipiert. Jede Funktionalität (z.B. Screenshot erstellen, Zwischenablage auslesen) ist in einer eigenen, gekapselten Komponente untergebracht. Diese Architektur ermöglicht eine exzellente Wartbarkeit und Erweiterbarkeit. Neue Funktionen können als "Plug-and-Play"-Module hinzugefügt werden, ohne bestehenden Code zu beeinträchtigen. Dies ist ein Beispiel für zukunftsfähige Softwarearchitektur.
+
+**c) Kreative Nutzung von Discord als C2-Server:**
+Die Entscheidung, Discord als Kommando- und Kontrollserver (C2) zu verwenden, ist eine kreative und unkonventionelle Lösung. Sie demonstriert, wie alltägliche Plattformen für spezialisierte technische Zwecke adaptiert werden können. Für ein Bildungsprojekt ist dies ein besonders wertvoller Aspekt, da es die Vielseitigkeit von APIs und die Integration verschiedener Systeme veranschaulicht.
+
+### 2. Hervorragende Ergebnisse und Qualitätssteigerung
+
+Das Projekt lieferte Ergebnisse, die die ursprünglichen Erwartungen in puncto Funktionalität und Qualität übertrafen.
+
+**a) Voll funktionaler End-to-End-Prototyp:**
+Es wurde nicht nur ein Konzept, sondern ein voll funktionsfähiger Prototyp entwickelt, der den gesamten Workflow abbildet: von der Client-Konfiguration im Web-Frontend über die Generierung im Backend bis hin zur Ausführung auf einem Zielsystem und der Steuerung via Discord. Die nahtlose Integration dieser unterschiedlichen Technologien (Next.js, Python, Discord-API) ist ein wesentlicher Erfolg.
+
+**b) Schaffung einer erweiterbaren Plattform:**
+Das Projekt hat nicht nur eine Software, sondern eine erweiterbare Plattform geschaffen. Die modulare Architektur (siehe 1b) ist die Grundlage für zukünftige Weiterentwicklungen und Anpassungen. Die Lösung ist nicht statisch, sondern als skalierbares System konzipiert.
+
+
+### 3. Innovation und Zukunftsperspektiven
+
+YADRMS zeichnet sich durch seinen innovativen Ansatz und sein Potenzial für die Zukunft aus.
+
+**a) Hoher didaktischer Wert:**
+Das Projekt dient als exzellentes Lehrmittel. Es demonstriert eine moderne Full-Stack-Anwendung mit getrenntem Frontend und Backend, API-Kommunikation und einer modularen, serviceorientierten Architektur. Es kann als Fallstudie für die Lehre in der Softwareentwicklung genutzt werden.
+
+**b) Potenzial für Erweiterungen:**
+Die geschaffene Architektur lädt zur Weiterentwicklung ein. Denkbare Erweiterungen, die auf der bestehenden Basis leicht umsetzbar wären, sind:
+
+- Unterstützung für weitere Programmiersprachen für den Client (z.B. PowerShell, Bash, C#).
+
+### Fazit
+
+Die besonderen Leistungen des YADRMS-Projekts liegen in der Kombination aus technischer Innovation, einer qualitativ hochwertigen Umsetzung und dem zukunftsweisenden, modularen Design. Das Projekt hat nicht nur alle gesetzten Ziele erreicht, sondern eine flexible und erweiterbare Plattform mit hohem didaktischem Wert geschaffen.
+
+
+
+# Risiken_Yams: [TODO: put in PDF]
