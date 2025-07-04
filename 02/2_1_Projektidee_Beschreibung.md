@@ -4,15 +4,6 @@
 
 Entwicklung und Dokumentation einer klaren, innovativen und umsetzbaren Projektidee für **YADRMS (Yet Another Discord Remote Management Software)**, die den Anforderungen der End-Dokumentation entspricht und einen echten Nutzen für Bildungszwecke stiftet.
 
-## Zeitplan / Meilensteine
-
-- **Ideenfindung**: Abgeschlossen (6-3-5 Methode bereits durchgeführt)
-- **Konzeptentwicklung**: Abgeschlossen
-- **Projektidee-Dokumentation**: In Bearbeitung
-- **Integration in Projektantrag**: Nächster Schritt
-
----
-
 ## 1. Beschreibung des Grundproblems bzw. Bedarfs
 
 In der modernen IT-Ausbildung und im Bereich der Cybersecurity-Bildung besteht ein wachsender Bedarf an praktischen, hands-on Lernerfahrungen. Traditionelle Lernansätze sind oft zu theoretisch und bieten wenig Gelegenheit, reale Systemarchitekturen und Technologie-Integrationen zu verstehen.
@@ -41,7 +32,8 @@ In der modernen IT-Ausbildung und im Bereich der Cybersecurity-Bildung besteht e
 
 ### Kernidee
 
-YADRMS ist ein modulares Fernwartungs- und -verwaltungssystem, das Discord als Kommando- und Kontrollserver nutzt. Das System ermöglicht es Benutzern, über eine intuitive Weboberfläche einen benutzerdefinierten Python-Client zu konfigurieren und zu generieren.
+YADRMS ist ein modulares Fernwartungs- und Verwaltungssystem, das Discord als Kommunikationskanal nutzt. Das System ermöglicht es Benutzern, über eine intuitive Weboberfläche einen benutzerdefinierten Python-Client zu konfigurieren und zu generieren.
+Dieser Client verbindet sich nach der Ausführung auf einem Zielsystem mit einem Discord-Server und wartet auf Befehle, die über einen Chat-Kanal gesendet werden.
 
 ### Geplantes Lieferobjekt
 
@@ -70,23 +62,26 @@ Ein vollständiges, funktionsfähiges System bestehend aus:
 
 ### Bildungsnutzen:
 
-- **Praktische Anwendung**: Direkte Umsetzung theoretischer Konzepte
-- **Technologie-Integration**: Verständnis für moderne Web-Technologien und API-Design
-- **Modulare Entwicklung**: Erlernen von Plugin-Architekturen und Erweiterbarkeit
-- **Sichere Experimentierumgebung**: Kontrollierte Lernumgebung ohne Produktionsrisiken
+- **Praktische Anwendung**: Das YADRMS-Projekt bietet einen erheblichen Bildungsnutzen durch die direkte Umsetzung theoretischer Konzepte in die Praxis. Studierende können hier nicht nur theoretisches Wissen erwerben, sondern es unmittelbar in einem funktionsfähigen System anwenden.
+- **Technologie-Integration**: Die Integration verschiedener Technologien ermöglicht ein tiefgreifendes Verständnis für moderne Web-Technologien und API-Design-Prinzipien.
+- **Sichere Experimentierumgebung**: Besonders wertvoll ist die Bereitstellung einer sicheren Experimentierumgebung, die es ermöglicht, komplexe Konzepte in einer kontrollierten Lernumgebung zu erproben, ohne dabei Produktionsrisiken einzugehen.
+- **Lern- und Bildungswert**: Das Projekt dient als praktisches Beispiel für moderne Softwareentwicklung.
+- **Portfolio-Artefakt**: Die Dokumentation und der Code dienen als Nachweis für erworbener Kompetenzen.
+- **Modulare Basis**: Die entwickelte Architektur kann als Grundlage für zukünftige Projekte oder Erweiterungen dienen.
+- **Modulare Entwicklung**: Durch die modulare Entwicklung lernen Teilnehmer die Grundlagen von Plugin-Architekturen und die Bedeutung von Erweiterbarkeit in Softwareprojekten kennen.
 
 ### Technische Relevanz:
 
-- **Moderne Architektur**: Demonstration von Frontend-Backend-Trennung
-- **API-First-Ansatz**: RESTful-Services und asynchrone Kommunikation
-- **Dynamische Code-Generierung**: Template-basierte Programmierung
-- **Discord-Integration**: Nutzung moderner Chat-APIs für innovative Anwendungen
+- **Moderne Architektur**: Das YADRMS-Projekt demonstriert eine moderne Softwarearchitektur durch die klare Trennung von Frontend und Backend. Diese Architektur ermöglicht es Entwicklern, die Prinzipien der Separation of Concerns und der modularen Entwicklung in der Praxis zu erleben und zu verstehen.
+- **API-First-Ansatz**: Durch die Implementierung von RESTful-Services und asynchroner Kommunikation zeigt das Projekt die Bedeutung eines API-First-Designs auf. Entwickler lernen hier, wie moderne Webanwendungen durch gut definierte Schnittstellen kommunizieren und wie diese für Skalierbarkeit und Wartbarkeit sorgen.
+- **Dynamische Code-Generierung**: Die Template-basierte Programmierung zur Generierung von Python-Clients demonstriert fortgeschrittene Konzepte der Metaprogrammierung. Diese Technik zeigt, wie Code automatisiert erstellt werden kann und welche Möglichkeiten sich daraus für die Entwicklung von Konfigurationstools ergeben.
+- **Discord-Integration**: Die Nutzung moderner Chat-APIs für innovative Anwendungen zeigt, wie externe Dienste in eigene Systeme integriert werden können. Diese Integration demonstriert praktische Anwendungen von Webhook-Technologien und Event-driven Architecture in realen Szenarien.
 
 ### Effizienzsteigerung:
 
-- **Schnelle Prototyperstellung**: Modulare Zusammenstellung von Funktionalitäten
-- **Wiederverwendbarkeit**: Plugin-System ermöglicht einfache Erweiterungen
-- **Benutzerfreundlichkeit**: Intuitive Weboberfläche reduziert Einarbeitungszeit
+- **Schnelle Prototyperstellung**: Modulare Zusammenstellung von Funktionalitäten ermöglicht schnelle Prototypen.
+- **Wiederverwendbarkeit**: Plugin-System ermöglicht einfache Erweiterungen.
+- **Benutzerfreundlichkeit**: Intuitive Weboberfläche reduziert Einarbeitungszeit.
 
 ## 5. Abgrenzung: Was gehört nicht zum Projekt?
 
@@ -108,7 +103,7 @@ Ein vollständiges, funktionsfähiges System bestehend aus:
 
 ### Frontend-Technologien:
 
-- **Next.js 14+**: React-Framework für moderne Webentwicklung
+- **Next.js <14**: React-Framework für moderne Webentwicklung
 - **TypeScript**: Typsicherheit und bessere Entwicklererfahrung
 - **ShadCN/UI**: Konsistente, moderne UI-Komponenten
 - **Tailwind CSS**: Utility-first CSS-Framework
@@ -133,19 +128,3 @@ Ein vollständiges, funktionsfähiges System bestehend aus:
 - **Security-Awareness**: Klare Dokumentation der Bildungszwecke und Risiken
 - **Komplexität der Code-Generierung**: Schrittweise Entwicklung, umfassende Tests
 - **Cross-Platform-Kompatibilität**: Testing auf verschiedenen Betriebssystemen
-
----
-
-## Fazit
-
-YADRMS stellt eine innovative Lösung für praktisches Lernen in der IT-Ausbildung dar. Durch die Kombination moderner Web-Technologien mit einem bekannten Kommunikationsmedium (Discord) entsteht ein zugängliches und lehrreiches Demonstrationssystem. Die modulare Architektur ermöglicht kontinuierliche Erweiterungen und Anpassungen für verschiedene Lernszenarien.
-
-Das Projekt bietet einen idealen Rahmen für das Erlernen von:
-
-- Frontend-Backend-Integration
-- API-Design und -Implementierung
-- Modularer Softwarearchitektur
-- Dynamischer Code-Generierung
-- Discord-Bot-Entwicklung
-
-Die klare Abgrenzung auf Bildungszwecke stellt sicher, dass das System verantwortungsvoll entwickelt und eingesetzt wird, während es gleichzeitig maximalen Lernnutzen bietet.

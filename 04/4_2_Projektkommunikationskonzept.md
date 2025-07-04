@@ -30,7 +30,7 @@ Ein strukturiertes Kommunikationskonzept stellt sicher, dass alle Projektbeteili
 
 | Medium                | Zweck / Inhalt                  | Intern/Extern | Synchron/Asynchron |
 |-----------------------|---------------------------------|--------------|--------------------|
-| Slack/Discord         | Teamkommunikation, schnelle Abstimmung | Intern       | Synchron/Async     |
+| Discord         | Teamkommunikation, schnelle Abstimmung | Intern       | Synchron/Async     |
 | Microsoft Teams       | Meetings, Screen-Sharing        | Intern        | Synchron           |
 | Persönliche Meetings  | Kickoff, Review, Retrospektive  | Intern        | Synchron           |
 | Notion                | Projektdokumentation, Wissensbasis | Intern    | Asynchron          |
@@ -46,8 +46,7 @@ Ein strukturiertes Kommunikationskonzept stellt sicher, dass alle Projektbeteili
 
 - **Regelkommunikation:**
   - Wöchentliche Teammeetings (Status, Planung)
-  - Tägliche Standups (kurze Abstimmung, optional)
-  - Zweiwöchentliche Statusberichte
+  - Wöchentliche Statusberichte
 - **Anlassbezogene Kommunikation:**
   - Eskalationen, Freigaben, Statusänderungen, Blocker
   - Ad-hoc-Meetings bei Bedarf
@@ -63,8 +62,7 @@ Ein strukturiertes Kommunikationskonzept stellt sicher, dass alle Projektbeteili
 | Medium           | Häufigkeit         | Verantwortlich         |
 |------------------|--------------------|------------------------|
 | Weekly Meeting   | 1× pro Woche       | Projektleitung         |
-| Statusbericht    | Alle 2 Wochen      | Teammitglieder         |
-| Standup          | Täglich (optional) | Alle                   |
+| Statusbericht    | 1× pro Woche       | Teammitglieder         |
 | Protokolle       | Nach Bedarf        | Zuständige Person      |
 | E-Mail           | Nach Bedarf        | Projektleitung, Team   |
 | GitHub Issues    | Laufend            | Entwickler, Tester     |
