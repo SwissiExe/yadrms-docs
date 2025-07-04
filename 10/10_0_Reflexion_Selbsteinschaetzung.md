@@ -12,17 +12,15 @@
 - Erstellung einer umfassenden Projektdokumentation gemäss der vordefinierten Roadmap
 - Demonstration moderner Softwarearchitekturen durch modularen Aufbau (Next.js Frontend + Python Backend)
 - Implementierung einer intuitiven BuilderUI zur dynamischen Client-Generierung
-- Entwicklung von 6 Kernmodulen: Screenshot, Clipboard, System-Info, File-Management, Process-Control, Network-Info
+- Entwicklung von 6 Kernmodulen: Screenshot, Clipboard, System-Info, BSOD (Blue Screen of Death), File-navigation, Full backdoor.
 
 ## Erreichte Ergebnisse
 
 **Technische Umsetzung:**
 
 - Das Hauptziel, eine funktionsfähige Discord-basierte Fernwartungssoftware zu entwickeln, wurde erfolgreich erreicht
-- Alle 6 geplanten Module wurden implementiert und funktionieren plattformübergreifend (Windows, macOS, Linux)
-- Die BuilderUI ermöglicht intuitive Client-Konfiguration mit durchschnittlich 1,8 Sekunden Generierungszeit
-- 98% Testabdeckung bei Komponententests erreicht
-- Erfolgreiche UAT-Tests mit 4 von 5 Testern, die das System als "sehr gut bedienbar" bewerteten
+- Alle 6 geplanten Module wurden implementiert
+- Die BuilderUI ermöglicht intuitive Client-Konfiguration mit wenigen Sekunden Generierungszeit
 
 **Dokumentation:**
 
@@ -36,20 +34,20 @@
 - Projekt innerhalb von 13 Wochen abgeschlossen (ursprünglich 12 Wochen geplant)
 - API-Response-Zeiten konstant unter 500ms
 - Modulare Architektur ermöglicht einfache Erweiterbarkeit
-- Keine kritischen Sicherheitslücken in Penetrationstests identifiziert
+
 
 ## Herausforderungen und Schwierigkeiten
 
 **Technische Herausforderungen:**
 
-- **Plattformübergreifende Kompatibilität:** Die grösste technische Herausforderung war die Gewährleistung, dass alle Module auf verschiedenen Betriebssystemen funktionieren. Lösung: Entwicklung OS-spezifischer Implementierungen für kritische Module.
+- **Plattformübergreifende Kompatibilität:** Die grösste technische Herausforderung war die Gewährleistung, dass alle Module auf verschiedenen Betriebssystemen funktionieren. 
 - **Discord-API-Limitierungen:** Rate-Limiting bei häufigen Commands stellte ein Problem dar. Gelöst durch Implementierung eines intelligenten Command-Cooldown-Systems.
-- **Performance-Optimierung:** Längere Ladezeiten auf älteren Systemen. Behoben durch Code-Optimierung und Definition minimaler Systemanforderungen.
+- **Performance-Optimierung:** Längere Ladezeiten auf älteren Systemen. Behoben durch Code-Optimierung und Definition minimaler Systemanforderungen. (in Python)
 
 **Organisatorische Herausforderungen:**
 
 - **Zeitmanagement:** Die Komplexität der plattformübergreifenden Entwicklung wurde anfangs unterschätzt, was zu einer Woche Verzögerung führte.
-- **Sicherheitsaspekte:** Die inhärenten Sicherheitsrisiken der C2-Funktionalität erforderten umfassende rechtliche und ethische Überlegungen.
+- **Sicherheitsaspekte:** Die Sicherheitsrisiken der C2-Funktionalität erforderten umfassende rechtliche und ethische Überlegungen.
 
 **Dokumentationsherausforderungen:**
 
@@ -111,7 +109,7 @@
 
 **Lessons Learned:**
 
-- Plattformübergreifende Entwicklung erfordert 30-40% mehr Zeit als geschätzt
+- Plattformübergreifende Entwicklung erfordert mehr Zeit als geschätzt
 - Modulare Architektur ist der Schlüssel für wartbare und erweiterbare Software
 - Sicherheitsaspekte müssen von der ersten Planungsphase an berücksichtigt werden
 - Kontinuierliche Tests sind essentiell für stabile Software
@@ -120,7 +118,6 @@
 
 **Integration von Erkenntnissen in zukünftige Projekte:**
 
-- **Verbesserte Zeitplanung:** Verwendung von Pufferzeiten von 25-30% für komplexe technische Aufgaben
 - **Sicherheits-First-Ansatz:** Integration von Sicherheitsüberlegungen bereits in die Konzeptphase
 - **Iterative Entwicklung:** Stärkere Fokussierung auf MVP (Minimum Viable Product) und iterative Verbesserung
 - **Dokumentations-Standards:** Etablierung eines einheitlichen Dokumentations-Frameworks mit Glossar und Styleguide
