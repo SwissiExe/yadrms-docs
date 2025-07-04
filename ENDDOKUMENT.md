@@ -191,3 +191,307 @@ Ein vollständiges, funktionsfähiges System bestehend aus:
 - **Cross-Platform-Kompatibilität**: Testing auf verschiedenen Betriebssystemen
 
 # HERO JOURNEY: [TODO: put in PDF]
+
+# Projektantrag: [TODO: put in PDF]
+
+# Projektorganisation – YADRMS
+
+## Ziel
+Die endgültige Organisation des Projekts umfasst die Strukturierung des Teams, Zuweisung von Aufgaben und Verantwortlichkeiten sowie die Festlegung von Prozessen zur erfolgreichen Durchführung des Projekts.
+
+---
+
+## 1. Projektteam & Rollenverteilung
+
+### Organigramm (Mermaid)
+```mermaid
+flowchart TD
+    PL[Projektleitung]
+    FE[Frontend-Entwicklung]
+    BE[Backend-Entwicklung]
+    QA[Qualitätssicherung]
+    DOC[Dokumentation]
+    AG[Auftraggeber]
+    EXT[Externe Partner]
+
+    PL --> FE
+    PL --> BE
+    PL --> QA
+    PL --> DOC
+    PL --> AG
+    PL --> EXT
+```
+
+### Rollen, Verantwortlichkeiten & Zuordnung
+
+| Rolle                | Name/Person         | Verantwortlichkeiten                        |
+|----------------------|---------------------|---------------------------------------------|
+| Projektleitung       | Isaac Lins      | Steuerung, Zeitplan, Eskalation, Reporting  |
+| Frontend-Entwicklung | YADRMS-TEAM       | UI/UX, BuilderUI, API-Anbindung             |
+| Backend-Entwicklung  |  YADRMS-TEAM         | Python-Builder, Module, Schnittstellen      |
+| Qualitätssicherung   |  YADRMS-TEAM           | Tests, Reviews, Abnahme                     |
+| Dokumentation        |  YADRMS-TEAM      | How-To, Anwenderdoku, Protokolle            |
+| Auftraggeber         | Jay Nagel          | Anforderungen, Feedback, Abnahme            |
+| Externe Partner      | (Discord)     | Beratung, Support                           |
+
+---
+
+## 2. Finaler Projektstrukturplan (PSP) & Arbeitspakete
+
+- Im Dokument [Projektstruktur und Arbeitspakete]() finden sie die finale Projektstruktur und Arbeitspakete
+- Arbeitspakete wurden priorisiert und Abhängigkeiten final geklärt
+- Kritische Pfade: UI/UX → BuilderUI → API-Anbindung → Integration → Systemtests
+
+**Prioritäten:**
+1. Grundfunktionalität (BuilderUI, Python-Builder, API)
+2. Modulerweiterung & Testing
+3. Dokumentation & Abschluss
+
+**Abhängigkeiten:**
+- API-Anbindung benötigt fertige Backend-Schnittstellen
+- Systemtests erst nach Integration möglich
+
+---
+
+## 3. Projektmethoden & Tools
+
+| Bereich           | Tool/Methodik         | Beschreibung                        |
+|-------------------|----------------------|--------------------------------------|
+| Zusammenarbeit    | Microsoft Teams, Discord       | Teamkommunikation, schnelle Abstimmung|
+| Aufgabenmanagement| GitHub Issues/Boards | Aufgaben, Status, Backlog, Review    |
+| Dokumentation     | Notion, Markdown     | Projektdoku, Protokolle, How-To      |
+| Meetings          | Microsoft Teams      | Regelmeetings, Screen-Sharing        |
+| Projektmanagement | Kanban (GitHub)      | Sprintplanung, Aufgabenverfolgung     |
+| Zeitplanung       | Gantt-Diagramm       | Zeitliche Planung, Meilensteine      |
+
+- **Methodik:** Kanban (iterativ, flexibel, mit Backlog und Sprints)
+- **Deadlines:** Werden im Gantt-Chart und GitHub Board gepflegt
+
+---
+
+## 4. Kommunikationswege & Meetingstruktur
+
+| Kommunikationsweg     | Zweck/Inhalt                | Frequenz           | Verantwortlich         |
+|----------------------|-----------------------------|--------------------|------------------------|
+| Weekly Meeting       | Status, Planung             | 1× pro Woche       | Projektleitung         |
+| Statusbericht        | Fortschritt, Blocker        | Alle 2 Wochen      | Teammitglieder         |
+| Ad-hoc-Meeting       | Eskalation, Freigabe        | Nach Bedarf        | Projektleitung         |
+| GitHub Issues/Boards | Aufgaben, Status, Review    | Laufend            | Entwickler, Tester     |
+
+- **Eskalationsweg:** Blocker werden im Weekly oder per E-Mail an die Projektleitung gemeldet. Kritische Themen werden kurzfristig in Ad-hoc-Meetings behandelt.
+
+---
+
+## 5. Ressourcenplanung
+
+| Ressource                | Verfügbarkeit / Planung         |
+|-------------------------|----------------------------------|
+| Entwickler (FE/BE)      | 2× Vollzeit                      |
+| QA                      | 1× Vollzeit                      |
+| Dokumentation           | 1× Vollzeit                      |
+| Technische Infrastruktur| GitHub, Cloud, Testsysteme       |
+| Budget                  | Nach Aufwand  |
+
+- Ressourcen werden im Projektboard und Gantt-Chart eingeplant
+- Verfügbarkeit wird regelmäßig im Weekly überprüft
+
+---
+
+## 6. Risikomanagement & Controlling
+
+### Risiken & Maßnahmen
+| Risiko                        | Eintrittswahrscheinlichkeit | Auswirkung | Gegenmaßnahme                        |
+|-------------------------------|-----------------------------|------------|--------------------------------------|
+| Verzögerung bei Schnittstellen| Mittel                      | Hoch       | Frühe Abstimmung, API-Tests          |
+| Personalausfall               | Niedrig                     | Mittel     | Vertretungsregel, Wissensdoku        |
+| Technische Probleme           | Mittel                      | Hoch       | Prototyping, regelmäßige Tests       |
+| Unklare Anforderungen         | Mittel                      | Hoch       | Regelmäßige Reviews, Abnahme         |
+
+### Controlling
+- Statusberichte alle 2 Wochen
+- Review der Arbeitspakete im Weekly
+- Fortschrittstracking via GitHub Board und Gantt-Chart
+- Anpassung der Planung bei Abweichungen
+
+---
+**Legende:**
+- YADRMS-TEAM = Isaac Lins, Oliver Zenger, Joel Furter, Kenta Waibel
+
+---
+**Mit dieser finalen Projektorganisation sind alle Rollen, Verantwortlichkeiten, Methoden und Prozesse klar geregelt. Sie bildet die Grundlage für eine erfolgreiche und transparente Projektdurchführung.** 
+
+# Projektstruktur – YADRMS
+
+## Ziel
+Die Projektstruktur zerlegt das Gesamtprojekt in übersichtliche Teilaufgaben und Arbeitspakete. Dies ermöglicht eine klare Aufgabenverteilung, erleichtert das Controlling und bildet die Grundlage für Zeit- und Ressourcenplanung.
+
+---
+
+## 1. Projektstrukturplan (PSP)
+
+### Hierarchische Gliederung
+
+1. Projektstart & Planung
+    1.1 Anforderungsanalyse
+    1.2 Grob- & Detailkonzept
+    1.3 Projektstruktur & Arbeitspakete
+2. Entwicklung
+    2.1 Frontend-Entwicklung
+        2.1.1 UI/UX Design
+        2.1.2 Implementierung BuilderUI
+        2.1.3 API-Anbindung
+        2.1.4 Testing & Review
+    2.2 Backend-Entwicklung
+        2.2.1 Python-Builder
+        2.2.2 Modulentwicklung
+        2.2.3 Schnittstellen/API
+        2.2.4 Testing & Review
+3. Integration & Test
+    3.1 Integration Frontend/Backend
+    3.2 Systemtests
+    3.3 User Acceptance Test
+4. Dokumentation & Abschluss
+    4.1 Nutzwertanalyse
+    4.2 Detailkonzept
+    4.3 How-To & Anwenderdoku
+    4.4 Projektabschluss & Übergabe
+
+### Visuelle Darstellung (Mermaid Baumstruktur)
+
+```mermaid
+graph TD
+    A[Projektstart & Planung]
+    B[Entwicklung]
+    C[Integration & Test]
+    D[Dokumentation & Abschluss]
+
+    A1(Anforderungsanalyse)
+    A2(Grob- & Detailkonzept)
+    A3(Projektstruktur & APs)
+    B1(Frontend-Entwicklung)
+    B2(Backend-Entwicklung)
+    B1a(UI/UX Design)
+    B1b(BuilderUI)
+    B1c(API-Anbindung)
+    B1d(Testing & Review)
+    B2a(Python-Builder)
+    B2b(Modulentwicklung)
+    B2c(Schnittstellen/API)
+    B2d(Testing & Review)
+    C1(Integration Frontend/Backend)
+    C2(Systemtests)
+    C3(User Acceptance Test)
+    D1(Nutzwertanalyse)
+    D2(Detailkonzept)
+    D3(How-To & Anwenderdoku)
+    D4(Projektabschluss & Übergabe)
+
+    A --> A1
+    A --> A2
+    A --> A3
+    B --> B1
+    B --> B2
+    B1 --> B1a
+    B1 --> B1b
+    B1 --> B1c
+    B1 --> B1d
+    B2 --> B2a
+    B2 --> B2b
+    B2 --> B2c
+    B2 --> B2d
+    C --> C1
+    C --> C2
+    C --> C3
+    D --> D1
+    D --> D2
+    D --> D3
+    D --> D4
+```
+
+---
+
+**Dieser Projektstrukturplan bildet die Grundlage für die weitere Zeit- und Ressourcenplanung wie in unserem Gantt-Chart und das Projektcontrolling.** 
+
+# Projektkommunikationskonzept – YADRMS
+
+## Ziel
+Ein strukturiertes Kommunikationskonzept stellt sicher, dass alle Projektbeteiligten zur richtigen Zeit die richtigen Informationen erhalten. Es regelt, wer mit wem worüber, wie oft, auf welchem Weg kommuniziert.
+
+---
+
+## 1. Zielgruppen und Beteiligte
+
+| Rolle                | Beteiligte / Zielgruppe         | Verantwortlichkeiten                |
+|----------------------|---------------------------------|-------------------------------------|
+| Projektleitung       | Projektmanager, Product Owner   | Steuerung, Koordination, Reporting  |
+| Entwicklung          | Frontend-/Backend-Entwickler    | Umsetzung, Testing, Dokumentation   |
+| Tester               | QA, Endnutzer                   | Testdurchführung, Feedback          |
+| Auftraggeber         | Kunde, Stakeholder              | Anforderungen, Abnahme, Feedback    |
+| Externe Partner      | Dienstleister, Berater          | Beratung, Zulieferung, Support      |
+
+---
+
+## 2. Kommunikationsziele
+
+- Transparenz und Nachvollziehbarkeit im Projektverlauf
+- Informationssicherheit und Vermeidung von Missverständnissen
+- Dokumentation von Entscheidungen und Fortschritten
+- Sicherstellung, dass alle Beteiligten stets informiert sind
+
+---
+
+## 3. Kommunikationsmittel & -kanäle
+
+| Medium                | Zweck / Inhalt                  | Intern/Extern | Synchron/Asynchron |
+|-----------------------|---------------------------------|--------------|--------------------|
+| Discord         | Teamkommunikation, schnelle Abstimmung | Intern       | Synchron/Async     |
+| Microsoft Teams       | Meetings, Screen-Sharing        | Intern        | Synchron           |
+| Persönliche Meetings  | Kickoff, Review, Retrospektive  | Intern        | Synchron           |
+| Notion                | Projektdokumentation, Wissensbasis | Intern    | Asynchron          |
+| GitHub Issues/Boards  | Aufgaben, Status, Bugtracking   | Intern        | Asynchron          |
+| E-Mail                | Offizielle Kommunikation, Protokolle | Extern   | Asynchron          |
+| Präsentationen        | Status, Ergebnisse, Meilensteine| Extern        | Synchron           |
+| Projektberichte       | Fortschritt, Status             | Extern        | Asynchron          |
+| Projekt-Website       | Öffentliches Update, Info        | Extern        | Asynchron          |
+
+---
+
+## 4. Formen der Kommunikation
+
+- **Regelkommunikation:**
+  - Wöchentliche Teammeetings (Status, Planung)
+  - Wöchentliche Statusberichte
+- **Anlassbezogene Kommunikation:**
+  - Eskalationen, Freigaben, Statusänderungen, Blocker
+  - Ad-hoc-Meetings bei Bedarf
+- **Dokumentation:**
+  - Protokolle von Meetings und Entscheidungen
+  - Aufgabenverfolgung und Status in GitHub Issues/Boards
+  - Fortschrittsdokumentation in Notion
+
+---
+
+## 5. Frequenz und Verantwortlichkeit
+
+| Medium           | Häufigkeit         | Verantwortlich         |
+|------------------|--------------------|------------------------|
+| Weekly Meeting   | 1× pro Woche       | Projektleitung         |
+| Statusbericht    | 1× pro Woche       | Teammitglieder         |
+| Protokolle       | Nach Bedarf        | Zuständige Person      |
+| E-Mail           | Nach Bedarf        | Projektleitung, Team   |
+| GitHub Issues    | Laufend            | Entwickler, Tester     |
+
+---
+
+## 6. Kommunikationsregeln
+
+- Freundlich, verbindlich und zielorientiert kommunizieren
+- Deadlines klar kommunizieren und bestätigen
+- Entscheidungen und wichtige Absprachen schriftlich dokumentieren
+- Status und Blocker offen ansprechen
+- Vertrauliche Informationen nur über sichere Kanäle teilen
+- Feedback konstruktiv und zeitnah geben
+
+---
+
+**Dieses Kommunikationskonzept ist Bestandteil der Projektdokumentation und sichert eine reibungslose Zusammenarbeit, klare Zuständigkeiten und transparente Abläufe im Projekt YADRMS.** 
