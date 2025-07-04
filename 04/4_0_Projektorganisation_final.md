@@ -42,7 +42,7 @@ flowchart TD
 
 ## 2. Finaler Projektstrukturplan (PSP) & Arbeitspakete
 
-- Siehe Dokument "Projektstruktur und Arbeitspakete"
+- Im Dokument [Projektstruktur und Arbeitspakete]() finden sie die finale Projektstruktur und Arbeitspakete
 - Arbeitspakete wurden priorisiert und Abhängigkeiten final geklärt
 - Kritische Pfade: UI/UX → BuilderUI → API-Anbindung → Integration → Systemtests
 
@@ -90,11 +90,11 @@ flowchart TD
 
 | Ressource                | Verfügbarkeit / Planung         |
 |-------------------------|----------------------------------|
-| Entwickler (FE/BE)      | 2× Vollzeit, 1× Teilzeit         |
-| QA                      | 1× Teilzeit                      |
-| Dokumentation           | 1× Teilzeit                      |
+| Entwickler (FE/BE)      | 2× Vollzeit                      |
+| QA                      | 1× Vollzeit                      |
+| Dokumentation           | 1× Vollzeit                      |
 | Technische Infrastruktur| GitHub, Cloud, Testsysteme       |
-| Budget                  | Nach Aufwand, Freigabe durch AG  |
+| Budget                  | Nach Aufwand  |
 
 - Ressourcen werden im Projektboard und Gantt-Chart eingeplant
 - Verfügbarkeit wird regelmäßig im Weekly überprüft
