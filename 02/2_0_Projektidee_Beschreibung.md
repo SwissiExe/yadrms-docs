@@ -103,7 +103,7 @@ Ein vollständiges, funktionsfähiges System bestehend aus:
 
 ### Frontend-Technologien:
 
-- **Next.js 14+**: React-Framework für moderne Webentwicklung
+- **Next.js <14**: React-Framework für moderne Webentwicklung
 - **TypeScript**: Typsicherheit und bessere Entwicklererfahrung
 - **ShadCN/UI**: Konsistente, moderne UI-Komponenten
 - **Tailwind CSS**: Utility-first CSS-Framework
@@ -128,19 +128,3 @@ Ein vollständiges, funktionsfähiges System bestehend aus:
 - **Security-Awareness**: Klare Dokumentation der Bildungszwecke und Risiken
 - **Komplexität der Code-Generierung**: Schrittweise Entwicklung, umfassende Tests
 - **Cross-Platform-Kompatibilität**: Testing auf verschiedenen Betriebssystemen
-
----
-
-## Fazit
-
-YADRMS stellt eine innovative Lösung für praktisches Lernen in der IT-Ausbildung dar. Durch die Kombination moderner Web-Technologien mit einem bekannten Kommunikationsmedium (Discord) entsteht ein zugängliches und lehrreiches Demonstrationssystem. Die modulare Architektur ermöglicht kontinuierliche Erweiterungen und Anpassungen für verschiedene Lernszenarien.
-
-Das Projekt bietet einen idealen Rahmen für das Erlernen von:
-
-- Frontend-Backend-Integration
-- API-Design und -Implementierung
-- Modularer Softwarearchitektur
-- Dynamischer Code-Generierung
-- Discord-Bot-Entwicklung
-
-Die klare Abgrenzung auf Bildungszwecke stellt sicher, dass das System verantwortungsvoll entwickelt und eingesetzt wird, während es gleichzeitig maximalen Lernnutzen bietet.
