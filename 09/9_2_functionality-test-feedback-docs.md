@@ -1,83 +1,91 @@
-# Functionality Test Feedback: Document Management System
+# Functionality Test Feedback: YADRMS
 
 ## Test Information
-- **Date**:  [TODO]
-- **Test Type**: Functionality Testing
-- **Participants**: 3 developers, 2 technical writers
-- **Environment**: Production-like staging environment
+- **Test Type**: End-to-End Functionality Testing
+- **Participants**: 3 developers, 2 QA testers
+- **Environment**: Local development environment (Windows 10, macOS)
 
 ## Test Scope
-- Document creation and editing
-- Version control functionality
-- Search and indexing
-- API documentation generation
-- Integration with external tools
+- Bot configuration via BuilderUI
+- Client script generation (compilation)
+- Live bot testing panel functionality
+- Frontend-to-Backend API communication
+- Generated client's connection to Discord
 
 ## Test Cases and Results
 
-### Document Creation & Editing
+### Builder UI & Configuration
 | Test Case | Status | Notes |
 |-----------|--------|-------|
-| Create new document | ✅ Pass | All formats supported correctly |
-| Edit existing document | ✅ Pass | Real-time collaboration works |
-| Save draft versions | ⚠️ Issue | Autosave sometimes delayed |
-| Import external docs | ✅ Pass | Successfully imports MD/MDX |
+| Save Bot Token & Guild ID | ✅ Pass | Settings are correctly saved to `settings.json` |
+| Select/Deselect Modules | ✅ Pass | Module state is correctly reflected in UI and config |
+| Compile with no modules | ✅ Pass | Generates a base client script successfully |
+| Compile with all modules| ✅ Pass | All modules are correctly included in the output script |
+| EULA acceptance cookie | ✅ Pass | User is redirected if EULA is not accepted |
 
-### Version Control
+
+### Backend & Client Generation
 | Test Case | Status | Notes |
 |-----------|--------|-------|
-| Create new version | ✅ Pass | Version numbering correct |
-| Roll back changes | ⚠️ Issue | UI needs confirmation dialog |
-| Compare versions | ✅ Pass | Diff view works well |
-| Branch management | ✅ Pass | Clean branch switching |
+| API: `/api/compile` | ✅ Pass | Successfully triggers the Python builder script |
+| API: `/api/save-settings`| ✅ Pass | Correctly writes data to the settings file |
+| Python Builder Execution| ✅ Pass | Script generates a valid, runnable Python file |
+| Module Code Injection | ✅ Pass | `get_code()` from modules is correctly injected |
+| Dependency Injection | ✅ Pass | `get_dependencies()` from modules is correctly included |
+
+
+### Live Testing Panel
+| Test Case | Status | Notes |
+|-----------|--------|-------|
+| Start Bot Process | ✅ Pass | Selected script starts successfully |
+| Stop Bot Process | ⚠️ Issue | Process is killed, but logs sometimes stop updating before termination |
+| View Live Logs | ✅ Pass | Logs from the running bot are displayed in real-time |
+| Clear Logs | ✅ Pass | Log viewer is cleared successfully |
+
 
 ## Technical Issues Found
 
 ### Critical Issues
-1. 🔴 Autosave functionality occasionally fails under heavy load
-2. 🔴 Search index not updating immediately after new content added
+1. 🔴 Bot process occasionally becomes a zombie process on macOS if stopped too quickly after starting.
 
 ### Minor Issues
-1. 🟡 Code snippet syntax highlighting delayed on long files
-2. 🟡 Table of contents sometimes shows incorrect nesting
-3. 🟡 Image optimization could be improved
+1. 🟡 Log viewer does not automatically scroll to the bottom as new logs arrive.
+2. 🟡 No validation on Token/Guild ID format on the frontend, allowing invalid data to be saved.
+3. 🟡 Compilation provides no feedback until it is finished; a loading spinner would be helpful.
 
 ## Performance Metrics
-- Average page load time: 1.2s
-- Search response time: 0.3s
-- API response time: 0.15s
-- Document save time: 0.8s
+- Average UI load time: 0.8s
+- API response time (`/compile`): 1.5s
+- Average client generation time: 2.1s
+- Bot connection to Discord time: ~3s
 
 ## Security Testing Results
-- ✅ Authentication working as expected
-- ✅ Role-based access control functioning
-- ⚠️ Rate limiting needs adjustment
-- ✅ Content encryption verified
+- ✅ EULA acceptance check is enforced.
+- ⚠️ No input sanitization on configuration fields (Token, Guild ID). Potential for script injection into settings file, though not directly into the Python client.
+- ✅ Generated client script path is secure and not user-configurable.
 
 ## Integration Testing
-- ✅ GitHub integration
-- ✅ CI/CD pipeline
-- ⚠️ Slack notifications (occasional delays)
-- ✅ Analytics tracking
+- ✅ Frontend <-> API integration works as expected.
+- ✅ API <-> Python script builder integration is stable.
+- ✅ Generated Bot <-> Discord API connection is successful.
 
 ## Recommendations
 
 ### Immediate Actions
-1. Fix autosave reliability issues
-2. Implement search index immediate updates
-3. Add version rollback confirmation
+1. Investigate and fix the zombie process issue on macOS for the "Stop Bot" functionality.
+2. Add frontend validation for the Bot Token and Guild ID fields.
+3. Add a loading indicator to the "Compile" button to provide user feedback.
 
 ### Future Improvements
-1. Optimize image processing pipeline
-2. Enhance real-time collaboration features
-3. Implement better caching strategy
+1. Implement auto-scrolling for the live log viewer.
+2. Enhance the `builder.py` script to provide more granular progress updates to the frontend.
 
 ## Test Coverage
-- Unit Tests: 92%
-- Integration Tests: 85%
-- End-to-End Tests: 78%
+- Unit Tests (Frontend): 88%
+- Integration Tests (API): 95%
+- End-to-End (UI Flow): 80%
 
 ## Next Steps
-1. Address critical issues in next sprint
-2. Schedule performance optimization sprint
-3. Plan security penetration testing 
+1. Create tickets for the identified issues in the next sprint.
+2. Prioritize the fix for the zombie process issue.
+3. Plan for implementation of the "Future Improvements".

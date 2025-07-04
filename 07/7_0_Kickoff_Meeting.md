@@ -40,7 +40,7 @@ YADRMS ist ein modulares Remote-Management-System, das Discord als Kommunikation
 
 ## 4. Vorgehen & Methoden
 
-- **Agiles Vorgehen:** Kanban, Sprints, regelmäßige Reviews
+- **Agiles Vorgehen:** Kanban, Sprints, regelmässige Reviews
 - **Projektphasen:**
     1. Projektidee & -definition
     2. Grob- & Detailkonzept

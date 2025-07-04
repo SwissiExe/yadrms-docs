@@ -9,7 +9,7 @@ Systematische Bewertung von Lösungsvarianten für das Remote-Management-System 
 
 | Kriterium            | Gewichtung (%) |
 |----------------------|:--------------:|
-| Benutzerfreundlichkeit | 25            |
+| Benutzerfreundlichkeit| 25            |
 | Kosten                | 15            |
 | Entwicklungsaufwand   | 20            |
 | Skalierbarkeit        | 15            |
@@ -30,7 +30,7 @@ Systematische Bewertung von Lösungsvarianten für das Remote-Management-System 
 
 | Kriterium            | Gewichtung | Variante A (YADRMS) | Variante B (Kommerziell) | Variante C (Eigenentwicklung) |
 |----------------------|:----------:|:-------------------:|:------------------------:|:-----------------------------:|
-| Benutzerfreundlichkeit | 25        | 4                   | 5                        | 3                             |
+| Benutzerfreundlichkeit| 25        | 4                   | 5                        | 3                             |
 | Kosten                | 15        | 5                   | 2                        | 4                             |
 | Entwicklungsaufwand   | 20        | 4                   | 5                        | 2                             |
 | Skalierbarkeit        | 15        | 4                   | 4                        | 3                             |
