@@ -1,9 +1,9 @@
-### 5.1 Nutzwertanalyse
+## 5.1 Nutzwertanalyse
 
 Wir haben uns entschieden, eine Nutzwertanalyse durchzuführen, um überhaupt zu sehen, ob es sich lohnt, unsere Lösung zu entwickeln.
 Unser Gedankengang war es, uns zu fragen, wer unsere Lösung nutzen würde, und warum sie unsere Lösung nutzen würden.
 
-#### 5.1.1 Kriterienauswahl & Gewichtung
+### 5.1.1 Kriterienauswahl & Gewichtung
 
 Wir haben uns entschieden, die folgenden Kriterien zu berücksichtigen:
 
@@ -23,7 +23,7 @@ Wenn wir die Kriterien in Prozent darstellen, erhalten wir folgende Gewichtung:
 
 Dabei ist es uns sehr wichtig, dass die Lösung benutzerfreundlich ist und wir uns nicht auf die Entwickler selbst konzentrieren müssen. Wir wollen, dass der User die Lösung so einfach wie möglich nutzen kann.
 
-#### 5.1.2 Varianten
+### 5.1.2 Varianten
 
 Diese Varianten haben wir in der Nutzwertanalyse berücksichtigt, bzw. Warum würden die Nutzer unsere Lösung nutzen?
 
@@ -51,7 +51,7 @@ Diese Bewertung ist subjektiv und basiert auf unserer Erfahrung.
 
 > LEGENDE: (1 = schlecht, 5 = sehr gut)
 
-#### 5.1.3 Nutzwertberechnung
+### 5.1.3 Nutzwertberechnung
 
 **Formel:** Bewertung × Gewichtung
 

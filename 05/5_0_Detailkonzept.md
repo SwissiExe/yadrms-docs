@@ -2,7 +2,7 @@
 
 Das Detailkonzept konkretisiert die im Grobkonzept definierte Lösung und beschreibt die technische, funktionale und organisatorische Umsetzung des Projekts im Detail. Es dient als verbindliche Grundlage für die Realisierung des Projekts und stellt sicher, dass alle Stakeholder ein gemeinsames Verständnis der geplanten Lösung haben.
 
-### 5.1 Technische Architektur, Systemaufbau und Workflow
+### 5.0.1 Technische Architektur, Systemaufbau und Workflow
 
 Das Frontend basiert auf Next.js 14 als modernem React-Framework. TypeScript wird durchgängig eingesetzt, um Typsicherheit zu gewährleisten und die Entwicklererfahrung durch intelligente Code-Vervollständigung und Fehlerprävention zu verbessern. ShadCN UI wird für die Bereitstellung moderner, barrierefreier UI-Komponenten eingesetzt.
 
