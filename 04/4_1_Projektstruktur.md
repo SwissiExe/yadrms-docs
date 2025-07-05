@@ -20,4 +20,4 @@ Die oberste Ebene wird von der Projektleitung geführt. Diese plant die Termine,
 Die zweite Ebene gliedert sich in verschiedene Funktionsbereiche. Es gibt separate Bereiche für Frontend-Entwicklung, Backend-Entwicklung, Modulentwicklung, Qualitätssicherung und Dokumentation. Jeder Bereich hat einen Verantwortlichen und klar definierte Aufgaben.
 
 **Ebene 3: Einzelaufgaben**
-Die dritte Ebene umfasst die konkreten Einzelaufgaben. Diese werden aus den größeren Arbeitspaketen abgeleitet und können von einzelnen Personen bearbeitet werden. Jede Aufgabe hat eine klare Beschreibung und einen Zeitrahmen.
+Die dritte Ebene umfasst die konkreten Einzelaufgaben. Diese werden aus den grösseren Arbeitspaketen abgeleitet und können von einzelnen Personen bearbeitet werden. Jede Aufgabe hat eine klare Beschreibung und einen Zeitrahmen.

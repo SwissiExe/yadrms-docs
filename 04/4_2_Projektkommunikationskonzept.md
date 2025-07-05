@@ -21,6 +21,6 @@ Alle zwei Wochen erstellt jeder Entwickler einen Fortschrittsbericht. Dieser ent
 
 ### 4.2.4 Konfliktmanagement
 
-Konflikte sollen frühzeitig erkannt und angesprochen werden. Wenn es Meinungsverschiedenheiten gibt, sollten diese offen diskutiert werden. Das verhindert, dass sich kleine Probleme zu größeren Konflikten entwickeln.
+Konflikte sollen frühzeitig erkannt und angesprochen werden. Wenn es Meinungsverschiedenheiten gibt, sollten diese offen diskutiert werden. Das verhindert, dass sich kleine Probleme zu grösseren Konflikten entwickeln.
 
 Bei Konflikten wird zuerst versucht, eine gemeinsame Lösung zu finden. Die Beteiligten diskutieren das Problem und suchen nach Kompromissen. Wenn keine Einigung möglich ist, wird der Konflikt an die Projektleitung eskaliert. Diese hört alle Beteiligten an und trifft eine Entscheidung.
