@@ -1,6 +1,6 @@
-## 7.0 Zwischenergebnisse
+## 7.1 Zwischenergebnisse
 
-### 7.1 Zwischenergebnis 1: Projektplanungsphase abgeschlossen
+### 7.1.1 Zwischenergebnis 1: Projektplanungsphase abgeschlossen
 
 **Datum:** 02.05.2025  
 **Ort:** Berufsschule  
@@ -21,7 +21,7 @@ Die Planungsphase des YADRMS-Projekts wurde erfolgreich abgeschlossen. Alle wese
 Wir müssen noch die Entwicklungsumgebung einrichten und die BuilderUI-Grundstruktur implementieren.
 Dazu möchten wir den ersten funktionalen Modul implementieren (Screenshot).
 
-### 7.2 Zwischenergebnis 2: Frontend-Grundstruktur entwickelt
+### 7.1.2 Zwischenergebnis 2: Frontend-Grundstruktur entwickelt
 
 **Datum:** 09.05.2025  
 **Ort:** Berufsschule  
@@ -45,7 +45,7 @@ Mögliche Verbesserungen wären intuitiver Modulauswahl-Interface und bessere vi
 
 Wir müssen noch die Backend-Entwicklung starten und die API-Routen für Client-Generierung implementieren, da die im Moment noch Manuell gerufen werden müssen.
 
-### 7.3 Zwischenergebnis 3: Backend-Integration und erste Module
+### 7.1.3 Zwischenergebnis 3: Backend-Integration und erste Module
 
 **Datum:** 16.05.2025  
 **Ort:** Berufsschule  
@@ -71,7 +71,7 @@ Unser PoC ist erfolgreich und wir können die ersten Module in den generierten C
 
 Wir müssen noch die fehlenden Module implementieren (File-Management, Process-Control, Network-Info) und die Tests durchführen.
 
-### 7.4 Zwischenergebnis 4: Finalisierung und Testphase
+### 7.1.4 Zwischenergebnis 4: Finalisierung und Testphase
 
 **Datum:** 23.05.2025  
 **Ort:** Berufsschule  
@@ -93,7 +93,7 @@ Alle 6 Module funktionsfähig: Screenshot, Clipboard, System-Info, File-Manageme
 
 Fertigstellung der Projektdokumentation und Erstellung des Abschlussberichts mit Soll-Ist-Vergleich. Dokumentation der Lessons Learned und Vorbereitung der finalen Präsentation.
 
-### 7.5 Zusammenfassung aller Zwischenergebnisse
+### 7.1.5 Zusammenfassung aller Zwischenergebnisse
 
 #### Gesamtprojektfortschritt
 
@@ -101,5 +101,3 @@ Die modulare Architektur hat sich als sehr erfolgreich erwiesen.
 Dies war Sinnvoll, da wir so flexibel sein können und neue Module einfach hinzufügen können. Dies dauerte eine Weile, da wir noch nicht wussten, wie wir die Module implementieren sollten, doch lohnte sich.
 Plattformübergreifende Kompatibilität erforderte mehr Aufwand als geplant.
 Umfassende Tests waren entscheidend für die Projektqualität und die Kombination aus Next.js und Python erwies sich als sehr effektiv.
-
-
