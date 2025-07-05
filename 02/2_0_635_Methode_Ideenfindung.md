@@ -22,7 +22,7 @@ Isaac Lins schlug SmartPlant vor - eine App zur automatischen Pflanzenpflege mit
 Kenta Waibel erweiterte die SmartPlant-Idee um Sensoren für Feuchtigkeit und Licht. Für das Remote-Management-System betonte er, dass es einfach zu bedienen sein sollte, ohne Programmierkenntnisse. Bei der StudyBuddy-Plattform konzentrierte er sich auf KI-gestützte Lernempfehlungen.
 
 **Benutzerfreundlichkeit und Interaktion:**
-Oliver Zenger dachte an die Benutzer und schlug Push-Benachrichtigungen bei Gießbedarf für SmartPlant vor. Für das Remote-Management-System hatte er eine innovative Idee: Discord als Kommunikationsweg zu nutzen. Diese Entscheidung wurde später sehr wichtig für das finale Projekt. Bei StudyBuddy konzentrierte er sich auf Lernstatistiken und Fortschrittsbalken.
+Oliver Zenger dachte an die Benutzer und schlug Push-Benachrichtigungen bei Giessbedarf für SmartPlant vor. Für das Remote-Management-System hatte er eine innovative Idee: Discord als Kommunikationsweg zu nutzen. Diese Entscheidung wurde später sehr wichtig für das finale Projekt. Bei StudyBuddy konzentrierte er sich auf Lernstatistiken und Fortschrittsbalken.
 
 **Community und Erweiterbarkeit:**
 Joel Furter dachte an Community-Features und schlug für SmartPlant eine Plattform zum Pflanzentausch vor. Seine Überlegungen zur modularen Architektur für das Remote-Management-System wurden später zur Grundlage der Systemarchitektur. Für StudyBuddy entwickelte er das Konzept von Peer-to-Peer-Lernräumen mit Videochat.

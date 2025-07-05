@@ -8,7 +8,7 @@ Die Entwicklung und Dokumentation einer klaren und umsetzbaren Projektidee für 
 
 In der modernen IT-Ausbildung und im Bereich der Cybersecurity-Bildung fehlen praktische, hands-on Lernerfahrungen. Traditionelle Lernansätze sind oft zu theoretisch und bieten wenig Gelegenheit, echte Systemarchitekturen und Technologie-Integrationen zu verstehen.
 
-Die identifizierten Probleme umfassen einen Mangel an praktischen Demonstrationstools für moderne Softwarearchitekturen. Außerdem ist das Erlernen von Client-Server-Kommunikation und API-Integration komplex. Es fehlen zugängliche Plattformen für das Experimentieren mit modularen Systemen. Gleichzeitig besteht ein Bedarf an sicheren, kontrollierten Umgebungen für Remote-Management-Konzepte.
+Die identifizierten Probleme umfassen einen Mangel an praktischen Demonstrationstools für moderne Softwarearchitekturen. Ausserdem ist das Erlernen von Client-Server-Kommunikation und API-Integration komplex. Es fehlen zugängliche Plattformen für das Experimentieren mit modularen Systemen. Gleichzeitig besteht ein Bedarf an sicheren, kontrollierten Umgebungen für Remote-Management-Konzepte.
 
 ### 2.1.3 Zielgruppenanalyse
 
@@ -27,7 +27,7 @@ Wenn der Benutzer einen Befehl sendet, soll das System den Befehl an das Zielsys
 ### 2.1.5 Projektabgrenzung
 
 **Was nicht Teil des Projekts ist:**
-Das System ist ausschließlich für Bildungszwecke gedacht und nicht für produktive Nutzung vorgesehen. Dies den Nutzern zu sagen ist sehr wichtig, da YADRMS sonst in böser Absicht benutzt werden könnte.
+Das System ist ausschliesslich für Bildungszwecke gedacht und nicht für produktive Nutzung vorgesehen. Dies den Nutzern zu sagen ist sehr wichtig, da YADRMS sonst in böser Absicht benutzt werden könnte.
 
 Für den Kommunikationskanal hätten wir eigenlich 2 Optionen:
 - Einen C2 Server selbst Coden
