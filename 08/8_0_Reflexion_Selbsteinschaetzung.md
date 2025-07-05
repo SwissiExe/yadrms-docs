@@ -11,11 +11,12 @@ Ein besonderer Erfolg war die erfolgreiche Implementierung aller geplanten Modul
 Eine Herausforderung war die Kommunikation mit dem Team, da wenn Isaac etwas machen wollte, spielten die anderen Clash Royale, oder arbeiteten an anderen Schulischen Aufgaben weiter. Das Coding wurde dann auch von Isaac alleine gemacht, und da die anderen nicht nichts machen wollten, haben Sie gesagt sie würden die Dokumentation machen.
 Im Unterricht haben die aber auch nichts gemacht, und wenn sie etwas gemacht haben, dann war es von ChatGPT ausgespuckt und absolut unsinnig.
 Einen Beispiel dafür, war dass sie angeblich 6 Leute Interviewed haben, um zu fragen, wie die Applikation in Mobile aussieht. Lustigerweise haben sie dann die Antworten von ChatGPT verwendet, was meiner meinung nach kein Sinn macht, da die Applikation gar nicht einmal auf mobile läuft.
-Dazu musste Isaac die rechtliche und ethische der C2-Funktionalität Überlegen.
+
+Dazu musste sich Isaac die rechtliche und ethische der C2-Funktionalität zweimal überlegen.
 
 ### 8.2 Kritische Reflexion
 
-Ich persönlich habe gelernt, nie wieder mit Anderen zusammen zu arbeiten, da sie nichts tun wollen und ich alles mache.
+Ich persönlich habe gelernt, nie wieder mit Anderen zusammen zu arbeiten, da sie nichts tun wollen und ich immer alles machen muss.
 
 Ich hätte mehr Zeit für die Dokumentation investieren sollen, da ich die Dokumentation am Ende des Projekts gemacht habe. Dazu wäre die Hilfe von anderen Teammitgliedern sinnvoll gewesen, was aber meiner meinung nach nicht realistisch gewesen wäre.
-Ich hätte mehr Druck machen können oder ein solo-team bilden können, da ich alleine alles gemacht habe.
+Ich hätte mehr druck im Team machen können oder ein solo-team bilden, da ich alles alleine gemacht habe.
