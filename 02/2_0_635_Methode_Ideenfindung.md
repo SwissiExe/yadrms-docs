@@ -35,4 +35,4 @@ Eris Jakupi rundete die Ideensammlung mit Wetterdaten-Integration für SmartPlan
 
 ### 2.2 Ideenbewertung und Projektauswahl
 
-Nach dem Sammeln aller Ideen haben wir die drei Hauptkonzepte strukturiert bewertet. Das Remote-Management-System (später YADRMS) wurde ausgewählt, weil es technisch innovativ war, praktisch umsetzbar und einen hohen Lernwert für alle Beteiligten hatte. Die Integration von Discord als Kommunikationsweg und die modulare Architektur waren die entscheidenden Besonderheiten, die zur finalen Projektauswahl führten.
+Nach dem Sammeln aller Ideen haben wir die drei Hauptkonzepte strukturiert bewertet. Das Remote-Management-System wurde ausgewählt, weil es technisch innovativ war, praktisch umsetzbar und einen hohen Lernwert für alle Beteiligten hatte. Die Integration von Discord als Kommunikationsweg und die modulare Architektur waren die entscheidenden Besonderheiten, die zur finalen Projektauswahl führten.
