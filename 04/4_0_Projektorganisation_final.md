@@ -1,14 +1,23 @@
-# Projektorganisation (final) – YADRMS
+## 4. Projektorganisation
 
-## Ziel
-Die endgültige Organisation des Projekts umfasst die Strukturierung des Teams, Zuweisung von Aufgaben und Verantwortlichkeiten sowie die Festlegung von Prozessen zur erfolgreichen Durchführung des Projekts.
+Die Projektorganisation von YADRMS basiert auf klar definierten Rollen und Verantwortlichkeiten. Jedes Teammitglied hat spezifische Aufgaben und Bereiche, für die es verantwortlich ist.
 
----
+**Projektleitung (Isaac Lins):**
+Isaac Lins übernimmt die Projektleitung und ist für die Gesamtkoordination verantwortlich. Er plant die Termine, überwacht den Fortschritt und sorgt dafür, dass alle Teammitglieder ihre Aufgaben erfüllen können.
 
-## 1. Projektteam & Rollenverteilung
+**Frontend-Entwicklung (Kenta Waibel):**
+Kenta Waibel ist für die Entwicklung der Weboberfläche zuständig. Seine Aufgaben umfassen die Erstellung der Benutzeroberfläche, die Integration mit dem Backend und die Optimierung der Benutzererfahrung.
 
-### Organigramm (Mermaid)
+**Backend-Entwicklung (Oliver Zenger):**
+Oliver Zenger entwickelt das Backend-System und die API-Schnittstellen. Er ist verantwortlich für die Serversoftware und die Verbindung zur Discord-API. Seine Arbeit bildet die Grundlage für alle anderen Systemkomponenten.
+
+**Modulentwicklung (Joel Furter):**
+Joel Furter konzentriert sich auf die Entwicklung der verschiedenen Module für das System. Er erstellt die Plugins und Funktionen, die später von den Clients verwendet werden. Dazu gehören Module für Screenshots, Systemsteuerung und andere Remote-Funktionen.
+
+Schlussendlich haben wir eine Tabelle, indem alles übersichtlich dargestellt wird.
+
 ```mermaid
+
 flowchart TD
     PL[Projektleitung]
     FE[Frontend-Entwicklung]
@@ -16,110 +25,47 @@ flowchart TD
     QA[Qualitätssicherung]
     DOC[Dokumentation]
     AG[Auftraggeber]
-    EXT[Externe Partner]
 
     PL --> FE
     PL --> BE
     PL --> QA
     PL --> DOC
-    PL --> AG
-    PL --> EXT
+    AG --> PL
+
 ```
 
-### Rollen, Verantwortlichkeiten & Zuordnung
+| Rolle                | Name/Person                 | Verantwortlichkeiten                   |
+| -------------------- | --------------------------- | -------------------------------------- |
+| Projektleitung       | Isaac Lins                  | Steuerung, Zeitplan, Reporting         |
+| Frontend-Entwicklung | Kenta Waibel, Oliver Zenger | UI/UX, BuilderUI, API-Anbindung        |
+| Backend-Entwicklung  | Joel Furter                 | Python-Builder, Module, Schnittstellen |
+| Dokumentation        | YADRMS-TEAM (Alle)          | How-To, Anwenderdoku, Protokolle       |
+| Auftraggeber         | Jay-Leo Nagel               | Anforderungen, Feedback, Abnahme       |
 
-| Rolle                | Name/Person         | Verantwortlichkeiten                        |
-|----------------------|---------------------|---------------------------------------------|
-| Projektleitung       | Isaac Lins      | Steuerung, Zeitplan, Eskalation, Reporting  |
-| Frontend-Entwicklung | YADRMS-TEAM       | UI/UX, BuilderUI, API-Anbindung             |
-| Backend-Entwicklung  |  YADRMS-TEAM         | Python-Builder, Module, Schnittstellen      |
-| Qualitätssicherung   |  YADRMS-TEAM           | Tests, Reviews, Abnahme                     |
-| Dokumentation        |  YADRMS-TEAM      | How-To, Anwenderdoku, Protokolle            |
-| Auftraggeber         | Jay Nagel          | Anforderungen, Feedback, Abnahme            |
-| Externe Partner      | (Discord)     | Beratung, Support                           |
+### 4.1 Kommunikationsstrukturen
 
----
+Die Kommunikation im YADRMS-Projekt folgt klaren Strukturen und Regeln. Das stellt sicher, dass alle Informationen rechtzeitig und an die richtigen Personen weitergegeben werden.
 
-## 2. Finaler Projektstrukturplan (PSP) & Arbeitspakete
+**Interne Kommunikation:**
+Die tägliche Kommunikation findet hauptsächlich über Discord statt. Das Team hat einen eigenen Server mit verschiedenen Kanälen für unterschiedliche Themen. Es gibt separate Kanäle für Entwicklung, Dokumentation, Fragen und allgemeine Diskussionen. Diese Struktur hilft dabei, Informationen zu organisieren und schnell zu finden.
 
-- Im Dokument [Projektstruktur und Arbeitspakete]() finden sie die finale Projektstruktur und Arbeitspakete
-- Arbeitspakete wurden priorisiert und Abhängigkeiten final geklärt
-- Kritische Pfade: UI/UX → BuilderUI → API-Anbindung → Integration → Systemtests
+**Regelmässige Meetings:**
+Das Team führt wöchentliche Meetings durch, um den Fortschritt zu besprechen und Probleme zu lösen. Diese Meetings finden jeden Montag statt und dauern maximal eine Stunde. Alle Teammitglieder berichten über ihre Arbeit und diskutieren anstehende Aufgaben.
 
-**Prioritäten:**
-1. Grundfunktionalität (BuilderUI, Python-Builder, API)
-2. Modulerweiterung & Testing
-3. Dokumentation & Abschluss
+### 4.2 Arbeitsaufteilung und Koordination
 
-**Abhängigkeiten:**
-- API-Anbindung benötigt fertige Backend-Schnittstellen
-- Systemtests erst nach Integration möglich
+Die Arbeitsaufteilung im YADRMS-Projekt ist klar strukturiert. Jedes Teammitglied hat seine Hauptverantwortlichkeit, aber es gibt auch Überschneidungen und Zusammenarbeit zwischen den Bereichen.
 
----
+**Hauptverantwortlichkeiten:**
+Jeder Entwickler ist für seinen Bereich hauptverantwortlich. Das bedeutet, dass er die Entscheidungen für seinen Bereich trifft und die Qualität seiner Arbeit verantwortet. Gleichzeitig ist er aber auch verpflichtet, die anderen Teammitglieder zu unterstützen, wenn sie Hilfe brauchen.
 
-## 3. Projektmethoden & Tools
+**Zusammenarbeit:**
+Die verschiedenen Bereiche müssen eng zusammenarbeiten. Der Frontend-Entwickler muss zum Beispiel mit dem Backend-Entwickler abstimmen, um die Schnittstellen zu definieren.
 
-| Bereich           | Tool/Methodik         | Beschreibung                        |
-|-------------------|----------------------|--------------------------------------|
-| Zusammenarbeit    | Microsoft Teams, Discord       | Teamkommunikation, schnelle Abstimmung|
-| Aufgabenmanagement| GitHub Issues/Boards | Aufgaben, Status, Backlog, Review    |
-| Dokumentation     | Notion, Markdown     | Projektdoku, Protokolle, How-To      |
-| Meetings          | Microsoft Teams      | Regelmeetings, Screen-Sharing        |
-| Projektmanagement | Kanban (GitHub)      | Sprintplanung, Aufgabenverfolgung     |
-| Zeitplanung       | Gantt-Diagramm       | Zeitliche Planung, Meilensteine      |
+### 4.3 Ressourcenmanagement
 
-- **Methodik:** Kanban (iterativ, flexibel, mit Backlog und Sprints)
-- **Deadlines:** Werden im Gantt-Chart und GitHub Board gepflegt
+Um eine effiziente Projektabwicklung zu gewährleisten, wird die verfügbare Zeit realistisch geplant und auf die verschiedenen Aufgaben verteilt. Das Team verwendet ein Kanban-Board, um den Fortschritt zu verfolgen und Engpässe zu identifizieren. Die Arbeitsbelastung wird gleichmässig auf alle Teammitglieder verteilt, wobei die individuellen Stärken und Interessen berücksichtigt werden. Wenn jemand überlastet ist, wird die Arbeit umverteilt oder zusätzliche Unterstützung organisiert.
 
----
+Alle benötigten Tools und Technologien werden zu Beginn des Projekts identifiziert und organisiert. Das Team nutzt kostenlose und Open-Source-Tools, wo immer möglich. Wenn kostenpflichtige Tools benötigt werden, haben die Pech.
 
-## 4. Kommunikationswege & Meetingstruktur
-
-| Kommunikationsweg     | Zweck/Inhalt                | Frequenz           | Verantwortlich         |
-|----------------------|-----------------------------|--------------------|------------------------|
-| Weekly Meeting       | Status, Planung             | 1× pro Woche       | Projektleitung         |
-| Statusbericht        | Fortschritt, Blocker        | Alle 2 Wochen      | Teammitglieder         |
-| Ad-hoc-Meeting       | Eskalation, Freigabe        | Nach Bedarf        | Projektleitung         |
-| GitHub Issues/Boards | Aufgaben, Status, Review    | Laufend            | Entwickler, Tester     |
-
-- **Eskalationsweg:** Blocker werden im Weekly oder per E-Mail an die Projektleitung gemeldet. Kritische Themen werden kurzfristig in Ad-hoc-Meetings behandelt.
-
----
-
-## 5. Ressourcenplanung
-
-| Ressource                | Verfügbarkeit / Planung         |
-|-------------------------|----------------------------------|
-| Entwickler (FE/BE)      | 2× Vollzeit                      |
-| QA                      | 1× Vollzeit                      |
-| Dokumentation           | 1× Vollzeit                      |
-| Technische Infrastruktur| GitHub, Cloud, Testsysteme       |
-| Budget                  | Nach Aufwand  |
-
-- Ressourcen werden im Projektboard und Gantt-Chart eingeplant
-- Verfügbarkeit wird regelmäßig im Weekly überprüft
-
----
-
-## 6. Risikomanagement & Controlling
-
-### Risiken & Maßnahmen
-| Risiko                        | Eintrittswahrscheinlichkeit | Auswirkung | Gegenmaßnahme                        |
-|-------------------------------|-----------------------------|------------|--------------------------------------|
-| Verzögerung bei Schnittstellen| Mittel                      | Hoch       | Frühe Abstimmung, API-Tests          |
-| Personalausfall               | Niedrig                     | Mittel     | Vertretungsregel, Wissensdoku        |
-| Technische Probleme           | Mittel                      | Hoch       | Prototyping, regelmäßige Tests       |
-| Unklare Anforderungen         | Mittel                      | Hoch       | Regelmäßige Reviews, Abnahme         |
-
-### Controlling
-- Statusberichte alle 2 Wochen
-- Review der Arbeitspakete im Weekly
-- Fortschrittstracking via GitHub Board und Gantt-Chart
-- Anpassung der Planung bei Abweichungen
-
----
-**Legende:**
-- YADRMS-TEAM = Isaac Lins, Oliver Zenger, Joel Furter, Kenta Waibel
-
----
-**Mit dieser finalen Projektorganisation sind alle Rollen, Verantwortlichkeiten, Methoden und Prozesse klar geregelt. Sie bildet die Grundlage für eine erfolgreiche und transparente Projektdurchführung.** 
+Potenzielle Risiken werden regelmässig besprochen und bewertet. Für die wichtigsten Risiken werden Notfallpläne erstellt. Das Team führt regelmässige Risikoanalysen durch und passt die Pläne bei Bedarf an.
