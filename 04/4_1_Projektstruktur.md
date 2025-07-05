@@ -1,91 +1,23 @@
-# Projektstruktur – YADRMS
+## 4.1 Projektstruktur
 
-## Ziel
-Die Projektstruktur zerlegt das Gesamtprojekt in übersichtliche Teilaufgaben und Arbeitspakete. Dies ermöglicht eine klare Aufgabenverteilung, erleichtert das Controlling und bildet die Grundlage für Zeit- und Ressourcenplanung.
+Die Projektstruktur von YADRMS ist hierarchisch aufgebaut und in verschiedene Ebenen unterteilt. Jede Ebene hat spezifische Aufgaben und Verantwortlichkeiten. Diese Struktur hilft dabei, das Projekt übersichtlich zu organisieren und die Zusammenarbeit zwischen den Teammitgliedern zu erleichtern.
 
----
+### 4.1.1 Hauptebenen der Struktur
 
-## 1. Projektstrukturplan (PSP)
+Wir haben uns so Organisiert, dass wir die beste Struktur für das Projekt gefunden haben.
+Die Struktur ist folgendermassen aufgebaut:
 
-### Hierarchische Gliederung
+| Ebene | Bezeichnung       |
+| ----- | ----------------- |
+| 1     | Projektleitung    |
+| 2     | Funktionsbereiche |
+| 3     | Einzelaufgaben    |
 
-1. Projektstart & Planung
-    1.1 Anforderungsanalyse
-    1.2 Grob- & Detailkonzept
-    1.3 Projektstruktur & Arbeitspakete
-2. Entwicklung
-    2.1 Frontend-Entwicklung
-        2.1.1 UI/UX Design
-        2.1.2 Implementierung BuilderUI
-        2.1.3 API-Anbindung
-        2.1.4 Testing & Review
-    2.2 Backend-Entwicklung
-        2.2.1 Python-Builder
-        2.2.2 Modulentwicklung
-        2.2.3 Schnittstellen/API
-        2.2.4 Testing & Review
-3. Integration & Test
-    3.1 Integration Frontend/Backend
-    3.2 Systemtests
-    3.3 User Acceptance Test
-4. Dokumentation & Abschluss
-    4.1 Nutzwertanalyse
-    4.2 Detailkonzept
-    4.3 How-To & Anwenderdoku
-    4.4 Projektabschluss & Übergabe
+**Ebene 1: Projektleitung**
+Die oberste Ebene wird von der Projektleitung geführt. Diese plant die Termine, überwacht den Fortschritt und sorgt für die Kommunikation zwischen allen Beteiligten.
 
-### Visuelle Darstellung (Mermaid Baumstruktur)
+**Ebene 2: Funktionsbereiche**
+Die zweite Ebene gliedert sich in verschiedene Funktionsbereiche. Es gibt separate Bereiche für Frontend-Entwicklung, Backend-Entwicklung, Modulentwicklung, Qualitätssicherung und Dokumentation. Jeder Bereich hat einen Verantwortlichen und klar definierte Aufgaben.
 
-```mermaid
-graph TD
-    A[Projektstart & Planung]
-    B[Entwicklung]
-    C[Integration & Test]
-    D[Dokumentation & Abschluss]
-
-    A1(Anforderungsanalyse)
-    A2(Grob- & Detailkonzept)
-    A3(Projektstruktur & APs)
-    B1(Frontend-Entwicklung)
-    B2(Backend-Entwicklung)
-    B1a(UI/UX Design)
-    B1b(BuilderUI)
-    B1c(API-Anbindung)
-    B1d(Testing & Review)
-    B2a(Python-Builder)
-    B2b(Modulentwicklung)
-    B2c(Schnittstellen/API)
-    B2d(Testing & Review)
-    C1(Integration Frontend/Backend)
-    C2(Systemtests)
-    C3(User Acceptance Test)
-    D1(Nutzwertanalyse)
-    D2(Detailkonzept)
-    D3(How-To & Anwenderdoku)
-    D4(Projektabschluss & Übergabe)
-
-    A --> A1
-    A --> A2
-    A --> A3
-    B --> B1
-    B --> B2
-    B1 --> B1a
-    B1 --> B1b
-    B1 --> B1c
-    B1 --> B1d
-    B2 --> B2a
-    B2 --> B2b
-    B2 --> B2c
-    B2 --> B2d
-    C --> C1
-    C --> C2
-    C --> C3
-    D --> D1
-    D --> D2
-    D --> D3
-    D --> D4
-```
-
----
-
-**Dieser Projektstrukturplan bildet die Grundlage für die weitere Zeit- und Ressourcenplanung wie in unserem Gantt-Chart und das Projektcontrolling.** 
+**Ebene 3: Einzelaufgaben**
+Die dritte Ebene umfasst die konkreten Einzelaufgaben. Diese werden aus den größeren Arbeitspaketen abgeleitet und können von einzelnen Personen bearbeitet werden. Jede Aufgabe hat eine klare Beschreibung und einen Zeitrahmen.
