@@ -10,10 +10,7 @@ In der modernen IT-Ausbildung und im Bereich der Cybersecurity-Bildung besteht e
 
 **Identifizierte Probleme:**
 
-- Mangel an praktischen Demonstrationstools für moderne Softwarearchitekturen
-- Komplexität beim Erlernen von Client-Server-Kommunikation und API-Integration
-- Fehlende zugängliche Plattformen für das Experimentieren mit modularen Systemen
-- Bedarf an sicheren, kontrollierten Umgebungen für Remote-Management-Konzepte
+Es mangelt an praktischen Demonstrationstools für moderne Softwarearchitekturen. Zusätzlich besteht eine hohe Komplexität beim Erlernen von Client-Server-Kommunikation und API-Integration. Weiterhin fehlen zugängliche Plattformen für das Experimentieren mit modularen Systemen. Schließlich besteht ein Bedarf an sicheren, kontrollierten Umgebungen für Remote-Management-Konzepte.
 
 ## 2. Zielgruppenanalyse: Wer profitiert vom Projekt?
 
@@ -41,24 +38,17 @@ Ein vollständiges, funktionsfähiges System bestehend aus:
 
 1. **Frontend (Next.js/TypeScript)**:
 
-   - Moderne, reaktive Weboberfläche (`BuilderUI`)
-   - Konfigurations-Interface für Discord-Bot-Einstellungen
-   - Modulauswahl und -konfiguration
-   - Echtzeit-Testing und Logging-Dashboard
+Das Frontend wird mit Next.js und TypeScript umgesetzt. Es bietet eine moderne, reaktive Weboberfläche namens BuilderUI. Über diese Oberfläche können die Einstellungen des Discord-Bots konfiguriert werden. Ausserdem ermöglicht sie die Auswahl und Konfiguration von Modulen sowie ein Dashboard für Echtzeit-Testing und Logging.
 
 2. **Backend (Python)**:
 
-   - Dynamischer Client-Generator
-   - Modulares Plugin-System
-   - API-Endpunkte für Frontend-Kommunikation
-   - Templating-Engine für Python-Code-Generierung
+Das Backend wird mit Python umgesetzt. Es bietet einen dynamischen Client-Generator, ein modulares Plugin-System und API-Endpunkte für die Kommunikation mit dem Frontend. Ausserdem wird eine Templating-Engine zur Generierung von Python-Code verwendet.
 
 3. **Generierter Client**:
-   - Anpassbarer Python-Bot
-   - Discord-Integration
-   - Modulare Funktionalitäten (Screenshots, Systeminformationen, etc.)
 
-## 4. Nutzen und Relevanz der Idee
+Der generierte Client ist ein anpassbarer Python-Bot mit Discord-Integration. Er hat über modulare Funktionalitäten wie Screenshots, Systeminformationen und ähnliches.
+
+
 
 ### Bildungsnutzen:
 
@@ -103,28 +93,16 @@ Ein vollständiges, funktionsfähiges System bestehend aus:
 
 ### Frontend-Technologien:
 
-- **Next.js <14**: React-Framework für moderne Webentwicklung
-- **TypeScript**: Typsicherheit und bessere Entwicklererfahrung
-- **ShadCN/UI**: Konsistente, moderne UI-Komponenten
-- **Tailwind CSS**: Utility-first CSS-Framework
+Für das Frontend wird Next.js (Version kleiner als 14) verwendet, ein React-Framework, das für moderne Webentwicklung genutzt wird. Mit TypeScript wird Typsicherheit erreicht, was die Entwicklung einfacher machen sollte. ShadCN/UI bietet konsistente und moderne UI-Komponenten. Für das Styling wird Tailwind CSS verwendet, ein Utility-first CSS-Framework.
 
 ### Backend-Technologien:
 
-- **Python 3.9+**: Flexibilität für dynamische Code-Generierung
-- **Flask/FastAPI**: Leichtgewichtige REST-API-Frameworks
-- **Jinja2**: Template-Engine für Python-Code-Generierung
-- **Discord.py**: Discord-API-Integration
+Für das Backend wird Python 3.9 oder neuer verwendet, weil es flexibel ist und sich gut für dynamische Code-Generierung eignet. Als REST-API-Frameworks kommen Flask oder FastAPI zum Einsatz, da sie leichtgewichtig und einfach zu nutzen sind. Jinja2 wird als Template-Engine genutzt, um automatisch Python-Code zu erzeugen. Für die Integration mit Discord wird Discord.py verwendet.
 
 ### Entwicklungsmethodik:
 
-- **Modulare Architektur**: Plugin-basiertes System für einfache Erweiterbarkeit
-- **API-First-Design**: Klare Trennung zwischen Frontend und Backend
-- **Test-driven Development**: Automatisierte Tests für kritische Komponenten
-- **Agile Entwicklung**: Iterative Entwicklung mit regelmäßigen Prototypen
+Die Software wird modular aufgebaut, also mit einem Plugin-System, das sich leicht erweitern lässt. Durch das sogenannte API-First-Design wird das Frontend klar vom Backend getrennt. Es wird testgetriebene Entwicklung genutzt, bei der wichtige Teile der Software automatisch getestet werden. Die Entwicklung erfolgt agil, also in kleinen Schritten mit regelmässigen Prototypen.
 
 ### Umsetzungsrisiken und Mitigation:
 
-- **Discord-API-Limitierungen**: Dokumentation studieren, Rate-Limiting implementieren
-- **Security-Awareness**: Klare Dokumentation der Bildungszwecke und Risiken
-- **Komplexität der Code-Generierung**: Schrittweise Entwicklung, umfassende Tests
-- **Cross-Platform-Kompatibilität**: Testing auf verschiedenen Betriebssystemen
+Ein Risiko ist, dass die Discord-API Einschränkungen hat. Deshalb soll die Dokumentation genau gelesen und ein Rate-Limiting eingebaut werden. Auch das Thema Sicherheit ist wichtig, deshalb wird klar dokumentiert, dass das Projekt nur zu Bildungszwecken gedacht ist. Die Code-Generierung kann komplex werden, daher wird sie Schritt für Schritt entwickelt und gründlich getestet. Damit alles auf verschiedenen Betriebssystemen funktioniert, wird die Software auch plattformübergreifend getestet.

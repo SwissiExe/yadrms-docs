@@ -112,10 +112,7 @@ flowchart TD
 | Unklare Anforderungen         | Mittel                      | Hoch       | Regelmäßige Reviews, Abnahme         |
 
 ### Controlling
-- Statusberichte alle 2 Wochen
-- Review der Arbeitspakete im Weekly
-- Fortschrittstracking via GitHub Board und Gantt-Chart
-- Anpassung der Planung bei Abweichungen
+Alle zwei Wochen werden Statusberichte erstellt. Die Arbeitspakete werden im  Weekly  überprüft. Der Fortschritt wird über ein GitHub Board und ein Gantt-Chart angezeigt. Falls es Abweichungen oder Probleme gibt, wird die Planung angepasst.
 
 ---
 **Legende:**

@@ -119,13 +119,7 @@ erDiagram
 
 ## 6. Zielsystem / Zielzustand
 
-Nach erfolgreicher Umsetzung steht ein modulares, webbasiertes Remote-Management-System zur Verfügung, das:
-- Über eine moderne UI (Next.js) konfigurierbar ist
-- Individuelle Python-Clients generiert
-- Remote-Steuerung und Monitoring via Discord ermöglicht
-- Einfach um neue Module erweiterbar ist
-- Logs und Status in Echtzeit anzeigt
-- Sicher und wartbar im eigenen Netzwerk betrieben werden kann
+Am Ende gibt es ein flexibles, webbasiertes System, das man von überall steuern kann. Es hat eine coole Benutzeroberfläche, mit der man alles einstellen kann. Das System macht eigene Python-Programme, die man benutzen kann. Man kann die Computer aus der Ferne über Discord steuern und alles beobachten. Neue Funktionen kann man leicht dazu machen. Das System zeigt auch in Echtzeit, was gerade passiert. Es ist sicher und funktioniert gut im eigenen Netzwerk.
 
 **Am Ende verfügbar:**
 - Web-UI (BuilderUI, Testing Panel)

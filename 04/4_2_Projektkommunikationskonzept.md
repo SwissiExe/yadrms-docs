@@ -19,10 +19,7 @@ Ein strukturiertes Kommunikationskonzept stellt sicher, dass alle Projektbeteili
 
 ## 2. Kommunikationsziele
 
-- Transparenz und Nachvollziehbarkeit im Projektverlauf
-- Informationssicherheit und Vermeidung von Missverständnissen
-- Dokumentation von Entscheidungen und Fortschritten
-- Sicherstellung, dass alle Beteiligten stets informiert sind
+Ziel der Kommunikation ist es, für Transparenz und Nachvollziehbarkeit im Projektverlauf zu sorgen. Gleichzeitig soll sichergestellt werden, dass Informationen sicher weitergegeben werden und Missverständnisse vermieden werden. Entscheidungen und Fortschritte werden dokumentiert, damit alle Beteiligten jederzeit informiert sind.
 
 ---
 
@@ -44,16 +41,11 @@ Ein strukturiertes Kommunikationskonzept stellt sicher, dass alle Projektbeteili
 
 ## 4. Formen der Kommunikation
 
-- **Regelkommunikation:**
-  - Wöchentliche Teammeetings (Status, Planung)
-  - Wöchentliche Statusberichte
-- **Anlassbezogene Kommunikation:**
-  - Eskalationen, Freigaben, Statusänderungen, Blocker
-  - Ad-hoc-Meetings bei Bedarf
-- **Dokumentation:**
-  - Protokolle von Meetings und Entscheidungen
-  - Aufgabenverfolgung und Status in GitHub Issues/Boards
-  - Fortschrittsdokumentation in Notion
+**Regelkommunikation** findet durch wöchentliche Teammeetings statt, in denen Status und Planung besprochen werden. Zusätzlich werden jede Woche Statusberichte erstellt.
+
+**Anlassbezogene Kommunikation** passiert bei speziellen Ereignissen wie Eskalationen, Freigaben, Statusänderungen oder Blockern. Bei Bedarf werden dafür auch kurzfristige Ad-hoc-Meetings einberufen.
+
+**Dokumentation** erfolgt durch Protokolle von Meetings und getroffenen Entscheidungen. Aufgaben und deren Status werden in GitHub Issues oder Boards verfolgt. Der Fortschritt wird zusätzlich in Notion dokumentiert.
 
 ---
 
@@ -71,12 +63,7 @@ Ein strukturiertes Kommunikationskonzept stellt sicher, dass alle Projektbeteili
 
 ## 6. Kommunikationsregeln
 
-- Freundlich, verbindlich und zielorientiert kommunizieren
-- Deadlines klar kommunizieren und bestätigen
-- Entscheidungen und wichtige Absprachen schriftlich dokumentieren
-- Status und Blocker offen ansprechen
-- Vertrauliche Informationen nur über sichere Kanäle teilen
-- Feedback konstruktiv und zeitnah geben
+Wir sprechen freundlich und klar miteinander. Termine sagen wir deutlich und bestätigen sie auch. Wichtige Entscheidungen und Absprachen schreiben wir auf. Probleme oder wenn was nicht klappt, sagen wir offen. Geheime Infos teilen wir nur über sichere Wege. Wenn wir Feedback geben, machen wir das nett und schnell.
 
 ---
 

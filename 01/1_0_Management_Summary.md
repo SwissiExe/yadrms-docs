@@ -16,18 +16,12 @@ YADRMS (Yet Another Discord Remote Management Software) ist ein modulares Remote
 ---
 
 ## Schlüsselerkenntnisse und Ergebnisse
-- Die Nutzung von Discord als C2-Kanal ermöglicht eine intuitive und sichere Steuerung, ohne eigene Server-Infrastruktur betreiben zu müssen.
-- Die modulare Architektur erlaubt eine schnelle Erweiterung und Anpassung an neue Anforderungen.
-- Die klare Trennung von Frontend, Backend und Modulen vereinfacht Wartung und Weiterentwicklung.
-- Die Projektmethodik (Kanban, regelmäßige Reviews, klare Arbeitspakete) hat zu hoher Transparenz und Effizienz geführt.
+Die Nutzung von Discord als C2-Kanal ermöglicht eine intuitive und sichere Steuerung, ohne eigene Server-Infrastruktur betreiben zu müssen. Die modulare Architektur erlaubt eine schnelle Erweiterung und Anpassung an neue Anforderungen. Die klare Trennung von Frontend, Backend und Modulen vereinfacht Wartung und Weiterentwicklung. Die Projektmethodik mit Kanban, regelmässigen Reviews und klaren Arbeitspaketen hat zu hoher Transparenz und Effizienz geführt.
 
 ---
 
 ## Herausforderungen und Lösungen
-- **Schnittstellenintegration:** Die Abstimmung zwischen Frontend, Backend und Discord-API erforderte intensive Tests und frühe Prototypen.
-- **Sicherheit:** Die sichere Handhabung von Tokens und Zugriffsrechten wurde durch klare Guidelines und isolierte Settings gewährleistet.
-- **Modularität:** Die Entwicklung eines flexiblen Modulsystems war komplex, wurde aber durch einheitliche Schnittstellen und klare Dokumentation gelöst.
-- **Ressourcenplanung:** Engpässe im Team wurden durch Priorisierung und flexible Aufgabenverteilung kompensiert.
+Die Schnittstellenintegration stellte eine grosse Herausforderung dar, da die Abstimmung zwischen Frontend, Backend und Discord-API intensive Tests und frühe Prototypen erforderte. Im Bereich der Sicherheit war die sichere Handhabung von Tokens und Zugriffsrechten kritisch, was durch klare Guidelines und isolierte Settings gewährleistet wurde. Die Modularität des Systems zu entwickeln war komplex, wurde aber durch einheitliche Schnittstellen und klare Dokumentation gelöst. Bei der Ressourcenplanung entstanden Engpässe im Team, die durch Priorisierung und flexible Aufgabenverteilung kompensiert wurden.
 
 ---
 

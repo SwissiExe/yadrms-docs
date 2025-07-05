@@ -18,10 +18,7 @@ YADRMS ist ein modulares Remote-Management-System, das Discord als Kommunikation
 
 ## 2. Ziele des Projekts
 
-- Entwicklung eines funktionalen Prototyps (Next.js-Frontend, Python-Backend)
-- Demonstration moderner Softwareentwicklung (Architektur, Integration, Dokumentation)
-- Erstellung einer vollständigen Projektdokumentation
-- Praktischer Lern- und Portfolio-Wert für alle Beteiligten
+Wir wollen einen funktionierenden Prototyp bauen, mit einem Next.js-Frontend und einem Python-Backend. Dabei zeigen wir, wie man moderne Software entwickelt – also wie die Teile zusammenarbeiten und wie man alles gut dokumentiert. Außerdem machen wir eine komplette Projektdokumentation. Das Ganze soll allen helfen, praktisch zu lernen und etwas fürs Portfolio zu haben.
 
 ---
 
@@ -53,21 +50,12 @@ YADRMS ist ein modulares Remote-Management-System, das Discord als Kommunikation
 
 ## 5. Kommunikationswege & Meetings
 
-- **Tools:** Discord, Microsoft Teams, GitHub, Notion
-- **Meetings:**
-    - Wöchentliches Statusmeeting (Projektleitung, Team)
-    - Ad-hoc-Meetings bei Bedarf
-    - Protokolle und Aufgaben in GitHub/Notion
-- **Regeln:** Transparenz, offene Kommunikation, schriftliche Dokumentation wichtiger Entscheidungen
-
+Wir benutzen verschiedene Tools wie Discord, Teams, GitHub und Notion. Einmal in der Woche gibt es ein Meeting mit dem Team. Alles Wichtige, wie Protokolle und Aufgaben, schreiben wir in GitHub oder Notion auf. Wichtig ist uns offene kommunikation.
 ---
 
 ## 6. Erste Aufgaben & nächste Schritte
 
-- Finalisierung des Detailkonzepts
-- Aufsetzen der Projektstruktur in GitHub/Notion
-- Zuweisung erster Arbeitspakete (z.B. UI-Design, API-Spezifikation, Python-Builder-Prototyp)
-- Terminierung der nächsten Meetings
+Als erstes machen wir das Detailkonzept fertig. Dann richten wir die Projektstruktur in GitHub und Notion ein. Danach teilen wir die ersten Aufgaben aus, zum Beispiel für das UI-Design, die API-Spezifikation und den Python-Builder-Prototyp. Zum Schluss planen wir die nächsten Treffen.
 
 ---
 
