@@ -1,139 +1,25 @@
-# Detailkonzept – YADRMS
+## 5. Detailkonzept
 
-## Ziel
-Das Detailkonzept konkretisiert die im Grobkonzept definierte Lösung. Es beschreibt die technische, funktionale und organisatorische Umsetzung im Detail und dient als Basis für die Realisierung des Projekts.
+Das Detailkonzept konkretisiert die im Grobkonzept definierte Lösung und beschreibt die technische, funktionale und organisatorische Umsetzung des Projekts im Detail. Es dient als verbindliche Grundlage für die Realisierung des Projekts und stellt sicher, dass alle Stakeholder ein gemeinsames Verständnis der geplanten Lösung haben.
 
----
+### 5.0.1 Technische Architektur, Systemaufbau und Workflow
 
-## 1. Technisches Konzept
+Das Frontend basiert auf Next.js 14 als modernem React-Framework. TypeScript wird durchgängig eingesetzt, um Typsicherheit zu gewährleisten und die Entwicklererfahrung durch intelligente Code-Vervollständigung und Fehlerprävention zu verbessern. ShadCN UI wird für die Bereitstellung moderner, barrierefreier UI-Komponenten eingesetzt.
 
-### Eingesetzte Tools, Frameworks & Sprachen
+Das Backend wird in Python 3.8+ entwickelt und nutzt die Flexibilität dieser Sprache für die dynamische Code-Generierung. Die modulare Architektur ermöglicht eine einfache Erweiterung um neue Funktionalitäten. Next.js API Routes werden für die REST-API-Implementierung verwendet, wodurch eine nahtlose Integration zwischen Frontend und Backend gewährleistet wird.
 
-| Komponente   | Technologie/Tool                |
-|--------------|---------------------------------|
-| Frontend     | Next.js (React, TypeScript), TailwindCSS, ShadCN UI, Radix UI |
-| Backend      | Python 3.8+, Modular Scripting  |
-| API          | Next.js API Routes              |
-| Datenhaltung | JSON-Dateien (Settings, Logs)   |
-| Sonstiges    | Discord API, Node.js, Playwright, Jest, Mocha |
+Die API-Schicht, implementiert durch Next.js API Routes, fungiert als Vermittler zwischen Frontend und Backend. Sie verarbeitet alle Anfragen, validiert Eingaben und koordiniert die Kommunikation mit dem Python Script Generator. Dieser Generator stellt das Herzstück des Systems dar und ist verantwortlich für die dynamische Erstellung massgeschneiderter Python-Clients basierend auf den Benutzerkonfigurationen.
 
-### Architekturübersicht
+Der generierte Python-Client wird als eigenständige Anwendung bereitgestellt, die auf dem Zielsystem ausgeführt wird. Nach der Aktivierung verbindet sich dieser Client mit dem konfigurierten Discord-Server und wartet auf Befehle, die über Chat-Kanäle gesendet werden. Diese Architektur ermöglicht eine vollständige Trennung von Konfiguration und Ausführung. Der User muss nicht Coden können, um die Funktionalität des Systems zu nutzen.
 
-- **Architektur:** Microservice-orientiert, Client-Server-Modell
-- **Frontend:** Web-App (Next.js) für Konfiguration, Steuerung und Monitoring
-- **Backend:** Python-Script-Generator, modulare Komponenten
-- **Kommunikation:** REST-APIs (Next.js), Dateibasierte Übergabe (Settings, Output)
-- **Drittanbieter:** Discord als Kommunikationskanal
+Die Anwendung verwendet JSON-Dateien für die Speicherung von Einstellungen, was eine einfache Konfiguration und Wartung ermöglicht. Diese dateibasierte Herangehensweise reduziert die Komplexität und macht externe Datenbanksysteme überflüssig
+Die Discord-API bildet das Herzstück der Kommunikationsfunktionalität und ermöglicht die nahtlose Integration mit Discord-Servern. Node.js wird für die Ausführung der Anwendung verwendet, während Playwright für End-to-End-Tests und Jest sowie Mocha für Unit-Tests eingesetzt werden.
 
-```mermaid
-graph TD
-    User[User]
-    Frontend[Next.js Web-UI]
-    API[API from Next.js]
-    Backend[Python Script Generator]
-    Output[OUTPUT: Python Client]
-    Discord[Discord Server]
-    Target[Zielsystem]
+Die Bot-Konfigurationsfunktion ermöglicht es Benutzern, Discord-Token, Guild-IDs und gewünschte Module über eine intuitive Weboberfläche zu definieren. Das System speichert die Konfiguration in einer strukturierten JSON-Datei. Diese Konfiguration bildet die Grundlage für die anschliessende Client-Generierung.
+Nach der Speicherung des JSONs kann der Benutzer die Kompilierung starten, welche beim Backend API-Aufrufe an den Python-Builder ausgelöst. Dieser liest die gespeicherten Einstellungen, wählt die entsprechenden Module aus und generiert einen vollständigen Python-Client. Der generierte Code wird im OUTPUT-Verzeichnis bereitgestellt und kann vom Benutzer heruntergeladen werden.
 
-    User --> Frontend
-    Frontend --> API
-    API --> Backend
-    Backend --> Output
-    Output --> Target
-    Target --> Discord
-    User --> Discord
-```
+Nach dem Download startet der Benutzer das generierte Python-Skript auf dem Zielsystem. Der Bot verbindet sich automatisch mit Discord, erstellt, verwaltet den konfigurierten Channel und wartet auf eingehende Befehle. Die Kommunikation erfolgt über standardisierte Discord-Kommandos. 
+Die Remote-Steuerung erfolgt durch das Senden spezifischer Befehle im Discord-Channel. Ein Befehl wie ".screenshot" wird vom Bot empfangen, das entsprechende Modul ausgeführt und das Ergebnis als Nachricht oder Datei im Channel gepostet. Diese intuitive Bedienung ermöglicht eine einfache Fernsteuerung ohne technische Vorkenntnisse. Unterstützte Module umfassen Screenshots, Blue Screen Of Death, Clipboard-Operationen, Systeminformationen und einen vollen Bash shell auf dem Zielsystem.
 
----
+Das System unterstützt die einfache Erweiterung um neue Module. Entwickler können neue Python-Module im entsprechenden Verzeichnis ablegen, und diese erscheinen automatisch in der Benutzeroberfläche. Diese Flexibilität ermöglicht eine kontinuierliche Weiterentwicklung und Anpassung an neue Anforderungen.
 
-## 2. Funktionales Konzept
-
-### Hauptfunktionen
-
-| Funktion                | Input                        | Ablauf (Kurz)                                                                 | Output                        |
-|-------------------------|------------------------------|-------------------------------------------------------------------------------|-------------------------------|
-| Bot-Konfiguration       | Token, Guild-ID, Module      | User gibt Daten im UI ein, speichert Settings                                 | settings.json                  |
-| Client-Generierung      | Settings                     | API ruft Python-Builder auf, generiert Script                                 | Python-Client im OUTPUT        |
-| Bot-Deployment          | Python-Client                | User startet Script auf Zielsystem                                            | Bot verbindet zu Discord       |
-| Remote-Steuerung        | Discord-Commands             | User sendet .Befehle an Bot, dieser führt sie aus                             | Antwort im Discord-Channel     |
-| Live-Monitoring         | -                            | UI zeigt Logs und Status in Echtzeit                                          | Log-Stream im UI               |
-| Modulerweiterung        | Python-Modul                 | Entwickler legt neues Modul im Backend ab                                     | Modul erscheint im UI          |
-
-### Optional: UI-Mockup (Beschreibung)
-- **BuilderUI:** Übersichtliche Eingabemaske für Token, Guild-ID, Modulauswahl, Kompilieren-Button, Log-Viewer.
-- **Testing Panel:** Start/Stop-Button, Dropdown für Scripts, Live-Log-Ausgabe.
-
----
-
-## 3. Ablaufbeschreibung (Nutzerflüsse)
-
-### Beispiel: Bot-Konfiguration & Deployment
-1. User öffnet die Web-App (BuilderUI)
-2. Gibt Discord-Bot-Token, Guild-ID und wählt Module aus
-3. Speichert die Konfiguration (Settings werden als JSON abgelegt)
-4. Klickt auf "Kompilieren" – API ruft Python-Builder auf
-5. Generiertes Python-Script wird im OUTPUT-Ordner bereitgestellt
-6. User lädt Script herunter und startet es auf dem Zielsystem
-7. Bot verbindet sich mit Discord und erstellt/verwaltet einen Channel
-8. User steuert das Zielsystem über Discord-Kommandos
-
-### Beispiel: Remote-Befehl
-1. User sendet z. B. `.screenshot` im Discord-Channel
-2. Bot empfängt Befehl, führt Modul aus
-3. Ergebnis (z. B. Screenshot) wird als Nachricht/Datei im Channel gepostet
-
----
-
-## 4. Daten- und Informationskonzept
-
-### Datenmodell (vereinfachtes ERD)
-
-```mermaid
-erDiagram
-    USER ||--o{ SETTINGS : konfiguriert
-    SETTINGS ||--o{ CLIENT_SCRIPT : erzeugt
-    CLIENT_SCRIPT ||--o{ LOG : erzeugt
-    CLIENT_SCRIPT ||--o{ MODULE : enthält
-    MODULE ||--o{ DEPENDENCY : benötigt
-```
-
-### Datenquellen & Speicherorte
-- **Settings:** `backend/settings/settings.json`
-- **Module:** `backend/languages/python/components/done/`
-- **Generierte Clients:** `OUTPUT/`
-- **Logs:** Temporär im Backend, Anzeige im UI
-- **Discord:** Kommunikationsschnittstelle, keine persistente Speicherung
-
----
-
-## 5. Testkonzept
-
-| Testart                | Beschreibung                                      | Verantwortlich      | Zeitraum         |
-|------------------------|---------------------------------------------------|---------------------|------------------|
-| Unit-Tests (Frontend)  | Komponenten- und Logiktests mit Jest, Playwright  | Entwickler Frontend | Laufend          |
-| Unit-Tests (Backend)   | Modultests für Python-Komponenten                 | Entwickler Backend  | Laufend          |
-| Integrationstests      | End-to-End-Tests UI ↔ API ↔ Backend               | Dev-Team           | Vor jedem Release|
-| User Acceptance Test   | Funktionaler Test durch Endnutzer                 | Product Owner       | Vor Go-Live      |
-
----
-
-## 6. Zielsystem / Zielzustand
-
-Nach erfolgreicher Umsetzung steht ein modulares, webbasiertes Remote-Management-System zur Verfügung, das:
-- Über eine moderne UI (Next.js) konfigurierbar ist
-- Individuelle Python-Clients generiert
-- Remote-Steuerung und Monitoring via Discord ermöglicht
-- Einfach um neue Module erweiterbar ist
-- Logs und Status in Echtzeit anzeigt
-- Sicher und wartbar im eigenen Netzwerk betrieben werden kann
-
-**Am Ende verfügbar:**
-- Web-UI (BuilderUI, Testing Panel)
-- API-Schnittstellen
-- Python-Client-Generator
-- Dokumentation (Nutzwertanalyse, Detailkonzept, How-To)
-- Beispielmodule (Screenshot, Clipboard, Ghostwriting, Wallpaper, BSOD)
-
----
-
-**Dieses Detailkonzept dient als verbindliche Grundlage für die weitere Projektumsetzung und die Erstellung des Gantt-Charts.** 

@@ -1,7 +1,6 @@
-# Besondere Leistungen: YADRMS
+## 6.0 Besondere Leistungen
 
-
-### 1. Innovative technische und konzeptionelle Lösungen
+### 6.0.1 Innovative technische und konzeptionelle Lösungen
 
 Im Rahmen des Projekts wurden mehrere kreative und technisch anspruchsvolle Lösungen entwickelt, die den Kern von YADRMS bilden.
 

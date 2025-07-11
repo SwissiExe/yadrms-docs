@@ -1,130 +1,60 @@
-# Projektidee – Beschreibung: YADRMS
+## 2.1 Projektidee
 
-## Ziele / Erwarteter Nutzen
+### 2.1.1 Ziele und erwarteter Nutzen
 
-Entwicklung und Dokumentation einer klaren, innovativen und umsetzbaren Projektidee für **YADRMS (Yet Another Discord Remote Management Software)**, die den Anforderungen der End-Dokumentation entspricht und einen echten Nutzen für Bildungszwecke stiftet.
+Die Entwicklung und Dokumentation einer klaren und umsetzbaren Projektidee für YADRMS steht im Zentrum dieses Vorhabens. Dabei liegt der Fokus auf einer praxisorientierten Lernumgebung, die theoretisches Wissen in greifbare Anwendungen umsetzt.
 
-## 1. Beschreibung des Grundproblems bzw. Bedarfs
+### 2.1.2 Beschreibung des Problems und Bedarfs
 
-In der modernen IT-Ausbildung und im Bereich der Cybersecurity-Bildung besteht ein wachsender Bedarf an praktischen, hands-on Lernerfahrungen. Traditionelle Lernansätze sind oft zu theoretisch und bieten wenig Gelegenheit, reale Systemarchitekturen und Technologie-Integrationen zu verstehen.
+In der modernen IT-Ausbildung und im Bereich der Cybersecurity-Bildung fehlen praktische, hands-on Lernerfahrungen. Traditionelle Lernansätze sind oft zu theoretisch und bieten wenig Gelegenheit, echte Systemarchitekturen und Technologie-Integrationen zu verstehen.
 
-**Identifizierte Probleme:**
+Die identifizierten Probleme umfassen einen Mangel an praktischen Demonstrationstools für moderne Softwarearchitekturen. Ausserdem ist das Erlernen von Client-Server-Kommunikation und API-Integration komplex. Es fehlen zugängliche Plattformen für das Experimentieren mit modularen Systemen. Gleichzeitig besteht ein Bedarf an sicheren, kontrollierten Umgebungen für Remote-Management-Konzepte.
 
-- Mangel an praktischen Demonstrationstools für moderne Softwarearchitekturen
-- Komplexität beim Erlernen von Client-Server-Kommunikation und API-Integration
-- Fehlende zugängliche Plattformen für das Experimentieren mit modularen Systemen
-- Bedarf an sicheren, kontrollierten Umgebungen für Remote-Management-Konzepte
+### 2.1.3 Zielgruppenanalyse
 
-## 2. Zielgruppenanalyse: Wer profitiert vom Projekt?
+Studierende der Informatik und IT bilden die Hauptzielgruppe. Sie können durch das Projekt moderne Webentwicklung und Backend-Integration lernen. Cybersecurity-Lernende profitieren vom Verständnis von C2-Konzepten (Command & Control) in kontrollierten Umgebungen. Dozenten und Ausbildner erhalten ein praktisches Demonstrationstool für Systemarchitekturen.
+Hobbyentwickler mit Interesse an Discord-Bot-Entwicklung und modularen Systemen sowie IT-Professionals, die Prototyping und Experimentieren mit neuen Technologien betreiben, ergänzen die Zielgruppe.
 
-### Primäre Zielgruppe:
+### 2.1.4 Kernidee und geplantes Ergebnis
 
-- **Studierende der Informatik/IT**: Lernen moderne Webentwicklung und Backend-Integration
-- **Cybersecurity-Lernende**: Verstehen von C2-Konzepten in kontrollierten Umgebungen
-- **Dozenten und Ausbildner**: Praktisches Demonstrationstool für Systemarchitekturen
+**Kernidee:**
+Wir wollten ein modulares System für die Fernwartung und Verwaltung, das Discord als Kommunikationsweg nutzt. Das System sollte es Benutzern ermöglichen, über eine einfache Weboberfläche einen benutzerdefinierten Python-Client zu konfigurieren und zu erstellen. Dieser Client verbindet sich nach der Ausführung auf einem Zielsystem mit einem Discord-Server und wartet auf Befehle, die über einen Chat-Kanal gesendet werden.
 
-### Sekundäre Zielgruppe:
+Als geplantes Ergebnis wollten wir ein Benutzerfreundliches, Intiuitives Webinterface, dass es den Nutzern ermöglicht, einen Gerät zu kontrollieren, ohne vorwissen haben zu müssen.
 
-- **Hobbyentwickler**: Interesse an Discord-Bot-Entwicklung und modularen Systemen
-- **IT-Professionals**: Prototyping und Experimentieren mit neuen Technologien
+Wenn der Benutzer einen Befehl sendet, soll das System den Befehl an das Zielsystem weiterleiten und das Ergebnis zurückgeben.
 
-## 3. Skizzierung der Kernidee und des geplanten Lieferobjekts
+### 2.1.5 Projektabgrenzung
 
-### Kernidee
+**Was nicht Teil des Projekts ist:**
+Das System ist ausschliesslich für Bildungszwecke gedacht und nicht für produktive Nutzung vorgesehen. Dies den Nutzern zu sagen ist sehr wichtig, da YADRMS sonst in böser Absicht benutzt werden könnte.
 
-YADRMS ist ein modulares Fernwartungs- und Verwaltungssystem, das Discord als Kommunikationskanal nutzt. Das System ermöglicht es Benutzern, über eine intuitive Weboberfläche einen benutzerdefinierten Python-Client zu konfigurieren und zu generieren.
-Dieser Client verbindet sich nach der Ausführung auf einem Zielsystem mit einem Discord-Server und wartet auf Befehle, die über einen Chat-Kanal gesendet werden.
+Für den Kommunikationskanal hätten wir eigenlich 2 Optionen:
+- Einen C2 Server selbst Coden
+- Einen Drittanbieter service benutzen und mit unserem API verbinden
 
-### Geplantes Lieferobjekt
+Wir haben uns für die zweite Option entschieden, da wir uns nicht dafür interessieren, einen eigenen C2 Server zu entwickeln. Wir wollten einen Service, der uns die Kommunikation mit dem Zielsystem übernimmt.
 
-Ein vollständiges, funktionsfähiges System bestehend aus:
+### 2.1.6 Umsetzungsplanung
 
-1. **Frontend (Next.js/TypeScript)**:
+Für die Umsetzung haben wir uns für die folgenden Technologien entschieden:
 
-   - Moderne, reaktive Weboberfläche (`BuilderUI`)
-   - Konfigurations-Interface für Discord-Bot-Einstellungen
-   - Modulauswahl und -konfiguration
-   - Echtzeit-Testing und Logging-Dashboard
+**Frontend:**
+Next.js 14 wird als React-Framework für moderne Webentwicklung eingesetzt, ergänzt durch TypeScript für Typsicherheit und bessere Entwicklererfahrung. ShadCN/UI stellt konsistente, moderne UI-Komponenten bereit, während Tailwind CSS als Utility-first CSS-Framework dient.
 
-2. **Backend (Python)**:
+**Backend:**
+Python 3.9+ bietet die nötige Flexibilität für dynamische Code-Generierung. Flask oder FastAPI werden als leichtgewichtige REST-API-Frameworks eingesetzt. Jinja2 dient als Template-Engine für Python-Code-Generierung und Discord.py für Discord-API-Integration.
 
-   - Dynamischer Client-Generator
-   - Modulares Plugin-System
-   - API-Endpunkte für Frontend-Kommunikation
-   - Templating-Engine für Python-Code-Generierung
+**Entwicklungsmethodik:**
+Die modulare Architektur ermöglicht ein Plugin-basiertes System für einfache Erweiterbarkeit. Das API-First-Design gewährleistet klare Trennung zwischen Frontend und Backend.
 
-3. **Generierter Client**:
-   - Anpassbarer Python-Bot
-   - Discord-Integration
-   - Modulare Funktionalitäten (Screenshots, Systeminformationen, etc.)
+Wichtig war Modularität, da wir später andere Tech-savvy Users die möglichkeit geben wollten, eigene Module zu erstellen.
 
-## 4. Nutzen und Relevanz der Idee
+### 2.1.7 Hero Journey
 
-### Bildungsnutzen:
+Wir haben uns inspiriert und ein Hero Journey erstellt.
+Im Hero Journey haben wir eine mögliche Benutzerreise dargestellt.
+Bei unserem Beispiel haben wir einen Benutzer, der mehrere Systeme verwaltet.
+Leider hat er ein Problem. Ein kritisches Sicherheitsproblem wird bekannt - eine Schwachstelle in einer wichtigen Abhängigkeit, die sofort auf allen Servern gepatcht werden muss.
 
-- **Praktische Anwendung**: Das YADRMS-Projekt bietet einen erheblichen Bildungsnutzen durch die direkte Umsetzung theoretischer Konzepte in die Praxis. Studierende können hier nicht nur theoretisches Wissen erwerben, sondern es unmittelbar in einem funktionsfähigen System anwenden.
-- **Technologie-Integration**: Die Integration verschiedener Technologien ermöglicht ein tiefgreifendes Verständnis für moderne Web-Technologien und API-Design-Prinzipien.
-- **Sichere Experimentierumgebung**: Besonders wertvoll ist die Bereitstellung einer sicheren Experimentierumgebung, die es ermöglicht, komplexe Konzepte in einer kontrollierten Lernumgebung zu erproben, ohne dabei Produktionsrisiken einzugehen.
-- **Lern- und Bildungswert**: Das Projekt dient als praktisches Beispiel für moderne Softwareentwicklung.
-- **Portfolio-Artefakt**: Die Dokumentation und der Code dienen als Nachweis für erworbener Kompetenzen.
-- **Modulare Basis**: Die entwickelte Architektur kann als Grundlage für zukünftige Projekte oder Erweiterungen dienen.
-- **Modulare Entwicklung**: Durch die modulare Entwicklung lernen Teilnehmer die Grundlagen von Plugin-Architekturen und die Bedeutung von Erweiterbarkeit in Softwareprojekten kennen.
-
-### Technische Relevanz:
-
-- **Moderne Architektur**: Das YADRMS-Projekt demonstriert eine moderne Softwarearchitektur durch die klare Trennung von Frontend und Backend. Diese Architektur ermöglicht es Entwicklern, die Prinzipien der Separation of Concerns und der modularen Entwicklung in der Praxis zu erleben und zu verstehen.
-- **API-First-Ansatz**: Durch die Implementierung von RESTful-Services und asynchroner Kommunikation zeigt das Projekt die Bedeutung eines API-First-Designs auf. Entwickler lernen hier, wie moderne Webanwendungen durch gut definierte Schnittstellen kommunizieren und wie diese für Skalierbarkeit und Wartbarkeit sorgen.
-- **Dynamische Code-Generierung**: Die Template-basierte Programmierung zur Generierung von Python-Clients demonstriert fortgeschrittene Konzepte der Metaprogrammierung. Diese Technik zeigt, wie Code automatisiert erstellt werden kann und welche Möglichkeiten sich daraus für die Entwicklung von Konfigurationstools ergeben.
-- **Discord-Integration**: Die Nutzung moderner Chat-APIs für innovative Anwendungen zeigt, wie externe Dienste in eigene Systeme integriert werden können. Diese Integration demonstriert praktische Anwendungen von Webhook-Technologien und Event-driven Architecture in realen Szenarien.
-
-### Effizienzsteigerung:
-
-- **Schnelle Prototyperstellung**: Modulare Zusammenstellung von Funktionalitäten ermöglicht schnelle Prototypen.
-- **Wiederverwendbarkeit**: Plugin-System ermöglicht einfache Erweiterungen.
-- **Benutzerfreundlichkeit**: Intuitive Weboberfläche reduziert Einarbeitungszeit.
-
-## 5. Abgrenzung: Was gehört nicht zum Projekt?
-
-### Explizit ausgeschlossen:
-
-- **Produktive Nutzung**: System ist ausschließlich für Bildungszwecke konzipiert
-- **Sicherheitsfeatures**: Keine Verschlüsselung oder Authentifizierung (bewusste Vereinfachung)
-- **Enterprise-Features**: Keine Benutzerverwaltung, Audit-Logs oder Compliance-Features
-- **Mobile Apps**: Fokus liegt auf Web-Interface, keine nativen Apps
-- **Alternative Plattformen**: Discord ist die einzige unterstützte Kommunikationsplattform
-
-### Bewusste Limitierungen:
-
-- **Kontrollierten Umgebungen**: Nutzung nur auf eigenen/autorisierten Systemen
-- **Bildungskontext**: Kein kommerzieller oder produktiver Einsatz
-- **Demonstrationszwecke**: Fokus auf Lerneffekt, nicht auf Performance oder Skalierbarkeit
-
-## 6. Erste Gedanken zu Umsetzbarkeit, Tools, Technologien oder Methoden
-
-### Frontend-Technologien:
-
-- **Next.js <14**: React-Framework für moderne Webentwicklung
-- **TypeScript**: Typsicherheit und bessere Entwicklererfahrung
-- **ShadCN/UI**: Konsistente, moderne UI-Komponenten
-- **Tailwind CSS**: Utility-first CSS-Framework
-
-### Backend-Technologien:
-
-- **Python 3.9+**: Flexibilität für dynamische Code-Generierung
-- **Flask/FastAPI**: Leichtgewichtige REST-API-Frameworks
-- **Jinja2**: Template-Engine für Python-Code-Generierung
-- **Discord.py**: Discord-API-Integration
-
-### Entwicklungsmethodik:
-
-- **Modulare Architektur**: Plugin-basiertes System für einfache Erweiterbarkeit
-- **API-First-Design**: Klare Trennung zwischen Frontend und Backend
-- **Test-driven Development**: Automatisierte Tests für kritische Komponenten
-- **Agile Entwicklung**: Iterative Entwicklung mit regelmäßigen Prototypen
-
-### Umsetzungsrisiken und Mitigation:
-
-- **Discord-API-Limitierungen**: Dokumentation studieren, Rate-Limiting implementieren
-- **Security-Awareness**: Klare Dokumentation der Bildungszwecke und Risiken
-- **Komplexität der Code-Generierung**: Schrittweise Entwicklung, umfassende Tests
-- **Cross-Platform-Kompatibilität**: Testing auf verschiedenen Betriebssystemen
+[!Hero Journey](2_2_hero-journey.pdf)

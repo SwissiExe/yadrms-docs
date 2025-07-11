@@ -1,83 +1,26 @@
-# Projektkommunikationskonzept – YADRMS
+## 4.2 Projektkommunikationskonzept
 
-## Ziel
-Ein strukturiertes Kommunikationskonzept stellt sicher, dass alle Projektbeteiligten zur richtigen Zeit die richtigen Informationen erhalten. Es regelt, wer mit wem worüber, wie oft, auf welchem Weg kommuniziert.
+Das Kommunikationskonzept soll sicherstellen, dass alle Beteiligten immer gut informiert sind. Es regelt, wie Informationen zwischen den Teammitgliedern, der Projektleitung und externen Partnern ausgetauscht werden. Ziel ist es, Missverständnisse zu vermeiden und eine effiziente Zusammenarbeit zu ermöglichen.
 
----
+### 4.2.1 Kommunikationskanäle
 
-## 1. Zielgruppen und Beteiligte
+Teams ist der Hauptkanal für die Kommunikation im Team. Hier werden schnelle Fragen gestellt, Probleme diskutiert und Entscheidungen getroffen. Dazu werden wir Teams für die wöchentlichen Teambesprechungen verwenden.
+Alle Entwickler nutzen GitHub für die Zusammenarbeit am Code. Wir werden GitHub für die Dokumentation und die Protokollierung des Projekts verwenden.
+Bei notfällen wird per privat Whatsapp genutzt.
+Einen anderen Kanal wird für die Dokumentation und die Protokollierung des Projekts nicht gebraucht.
 
-| Rolle                | Beteiligte / Zielgruppe         | Verantwortlichkeiten                |
-|----------------------|---------------------------------|-------------------------------------|
-| Projektleitung       | Projektmanager, Product Owner   | Steuerung, Koordination, Reporting  |
-| Entwicklung          | Frontend-/Backend-Entwickler    | Umsetzung, Testing, Dokumentation   |
-| Tester               | QA, Endnutzer                   | Testdurchführung, Feedback          |
-| Auftraggeber         | Kunde, Stakeholder              | Anforderungen, Abnahme, Feedback    |
-| Externe Partner      | Dienstleister, Berater          | Beratung, Zulieferung, Support      |
+### 4.2.2 Meetings und Besprechungen
 
----
+Jeden Freitag um 7:35 Uhr findet ein Teammeeting statt. Hier berichtet jeder über seine Arbeit der letzten Woche und plant die kommende Woche. Probleme werden besprochen und Entscheidungen getroffen.
 
-## 2. Kommunikationsziele
+Von jedem Meeting wird ein Protokoll erstellt. Das Protokoll enthält die wichtigsten Punkte, getroffene Entscheidungen und Aufgaben für die nächste Woche. Dieses Protokoll wird in Teams gespeichert.
 
-- Transparenz und Nachvollziehbarkeit im Projektverlauf
-- Informationssicherheit und Vermeidung von Missverständnissen
-- Dokumentation von Entscheidungen und Fortschritten
-- Sicherstellung, dass alle Beteiligten stets informiert sind
+### 4.2.3 Fortschrittsberichte
 
----
+Alle zwei Wochen erstellt jeder Entwickler einen Fortschrittsbericht. Dieser enthält Informationen über die erledigten Aufgaben, aktuelle Probleme und geplante Aktivitäten. Die Berichte werden in Teams als Nachricht abgeschickt, damit wir ein wöchentlichen Überblick haben, von was gemacht wurde und was fehlt.
 
-## 3. Kommunikationsmittel & -kanäle
+### 4.2.4 Konfliktmanagement
 
-| Medium                | Zweck / Inhalt                  | Intern/Extern | Synchron/Asynchron |
-|-----------------------|---------------------------------|--------------|--------------------|
-| Discord         | Teamkommunikation, schnelle Abstimmung | Intern       | Synchron/Async     |
-| Microsoft Teams       | Meetings, Screen-Sharing        | Intern        | Synchron           |
-| Persönliche Meetings  | Kickoff, Review, Retrospektive  | Intern        | Synchron           |
-| Notion                | Projektdokumentation, Wissensbasis | Intern    | Asynchron          |
-| GitHub Issues/Boards  | Aufgaben, Status, Bugtracking   | Intern        | Asynchron          |
-| E-Mail                | Offizielle Kommunikation, Protokolle | Extern   | Asynchron          |
-| Präsentationen        | Status, Ergebnisse, Meilensteine| Extern        | Synchron           |
-| Projektberichte       | Fortschritt, Status             | Extern        | Asynchron          |
-| Projekt-Website       | Öffentliches Update, Info        | Extern        | Asynchron          |
+Konflikte sollen frühzeitig erkannt und angesprochen werden. Wenn es Meinungsverschiedenheiten gibt, sollten diese offen diskutiert werden. Das verhindert, dass sich kleine Probleme zu grösseren Konflikten entwickeln.
 
----
-
-## 4. Formen der Kommunikation
-
-- **Regelkommunikation:**
-  - Wöchentliche Teammeetings (Status, Planung)
-  - Wöchentliche Statusberichte
-- **Anlassbezogene Kommunikation:**
-  - Eskalationen, Freigaben, Statusänderungen, Blocker
-  - Ad-hoc-Meetings bei Bedarf
-- **Dokumentation:**
-  - Protokolle von Meetings und Entscheidungen
-  - Aufgabenverfolgung und Status in GitHub Issues/Boards
-  - Fortschrittsdokumentation in Notion
-
----
-
-## 5. Frequenz und Verantwortlichkeit
-
-| Medium           | Häufigkeit         | Verantwortlich         |
-|------------------|--------------------|------------------------|
-| Weekly Meeting   | 1× pro Woche       | Projektleitung         |
-| Statusbericht    | 1× pro Woche       | Teammitglieder         |
-| Protokolle       | Nach Bedarf        | Zuständige Person      |
-| E-Mail           | Nach Bedarf        | Projektleitung, Team   |
-| GitHub Issues    | Laufend            | Entwickler, Tester     |
-
----
-
-## 6. Kommunikationsregeln
-
-- Freundlich, verbindlich und zielorientiert kommunizieren
-- Deadlines klar kommunizieren und bestätigen
-- Entscheidungen und wichtige Absprachen schriftlich dokumentieren
-- Status und Blocker offen ansprechen
-- Vertrauliche Informationen nur über sichere Kanäle teilen
-- Feedback konstruktiv und zeitnah geben
-
----
-
-**Dieses Kommunikationskonzept ist Bestandteil der Projektdokumentation und sichert eine reibungslose Zusammenarbeit, klare Zuständigkeiten und transparente Abläufe im Projekt YADRMS.** 
+Bei Konflikten wird zuerst versucht, eine gemeinsame Lösung zu finden. Die Beteiligten diskutieren das Problem und suchen nach Kompromissen. Wenn keine Einigung möglich ist, wird der Konflikt an die Projektleitung eskaliert. Diese hört alle Beteiligten an und trifft eine Entscheidung.
